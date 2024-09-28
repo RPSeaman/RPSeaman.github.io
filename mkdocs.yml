@@ -21,15 +21,15 @@ theme:
       toggle: 
         icon: material/toggle-switch-off-outline
         name: Switch to Dark Mode
-      primary: blue
+      primary: green
       accent: deep orange
     - scheme: slate
       toggle: 
         icon: material/toggle-switch
         name: Switch to Light Mode
-      primary: blue
+      primary: green
       accent: deep orange
-repo_url: https://github.com/mdibl/scrnaseq_course_2024
+repo_url: https://github.com/RPSeaman/RPSeaman.github.io
 markdown_extensions:
   - attr_list
   - md_in_html
