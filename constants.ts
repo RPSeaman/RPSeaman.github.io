@@ -8,14 +8,23 @@ As a professional in Biomedical Informatics, my core mission is translating comp
 `;
 
 export const SKILLS: Skill[] = [
-  { name: 'React', category: 'Frontend', level: 95 },
-  { name: 'TypeScript', category: 'Frontend', level: 90 },
-  { name: 'Tailwind CSS', category: 'Frontend', level: 95 },
-  { name: 'Node.js', category: 'Backend', level: 85 },
-  { name: 'PostgreSQL', category: 'Backend', level: 80 },
-  { name: 'Python', category: 'AI', level: 75 },
-  { name: 'Docker', category: 'Tools', level: 85 },
-  { name: 'Figma', category: 'Tools', level: 80 },
+  { name: 'RNAseq', category: 'Modalities', level: 95 },
+  { name: 'sc/snRNAseq', category: 'Modalities', level: 90 },
+  { name: '10x Visium', category: 'Modalities', level: 95 },
+  { name: '10x Xenium', category: 'Modalities', level: 95 },
+  { name: '10x Multiome', category: 'Modalities', level: 95 },
+  { name: 'Python', category: 'Langauges', level: 85 },
+  { name: 'R', category: 'Langauges', level: 80 },
+  { name: 'Java', category: 'Langauges', level: 80 },
+  { name: 'Groovy', category: 'Langauges', level: 80 },
+  { name: 'Bash', category: 'Langauges', level: 80 },
+  { name: 'Nextflow', category: 'Tools', level: 75 },
+  { name: 'nf-core', category: 'Tools', level: 85 },
+  { name: 'command line', category: 'Tools', level: 85 },
+  { name: 'genomics analysis tools', category: 'Tools', level: 85 },
+  { name: 'git/GitHub', category: 'Tools', level: 85 },
+  { name: 'Google Cloud Platform', category: 'Platforms', level: 80 },
+  { name: 'Amazon Web Services', category: 'Platforms', level: 80 },
 ];
 
 export const PROJECTS: Project[] = [

@@ -4,8 +4,8 @@ import { PORTFOLIO_OWNER, OWNER_ROLE } from '../constants';
 
 export const Hero: React.FC = () => {
   return (
-    <div className="max-w-2xl">
-      <div className="space-y-8">
+    <div className="grid md:grid-cols-3 gap-12 items-center w-full">
+      <div className="space-y-8 md:col-span-2">
         <div className="inline-block border-b border-text-secondary pb-1">
            <span className="text-text-secondary text-sm font-mono">Based in Cambridge</span>
         </div>
@@ -32,6 +32,14 @@ export const Hero: React.FC = () => {
           <a href="https://linkedin.com/in/ryanpseaman" className="text-text-secondary hover:text-text-primary transition-colors"><Linkedin className="w-5 h-5" /></a>
           <a href="https://instagram.com/ryanpseaman" className="text-text-secondary hover:text-text-primary transition-colors"><Instagram className="w-5 h-5" /></a>
         </div>
+      </div>
+
+      <div className="hidden md:block justify-self-end">
+        <img 
+          src="/images/profile.jpeg" 
+          alt="Profile picture" 
+          className="mt-8 w-full object-cover aspect-square"
+        />
       </div>
     </div>
   );

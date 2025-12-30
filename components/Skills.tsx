@@ -16,7 +16,7 @@ export const Skills: React.FC = () => {
             <h3 className="text-text-primary font-medium mb-4">{cat}</h3>
             <ul className="space-y-2">
               {SKILLS.filter(s => s.category === cat).map(skill => (
-                <li key={skill.name} className="text-text-secondary text-sm">
+                <li key={skill.name} className="text-text-secondary text-sm font-mono">
                   {skill.name}
                 </li>
               ))}
