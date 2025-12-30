@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
 
       <div className="hidden md:block justify-self-end">
         <img 
-          src="images/profile.jpeg" 
+          src="./images/profile.jpeg" 
           alt="Profile picture" 
           className="mt-8 w-full object-cover aspect-square"
         />
