@@ -34,11 +34,11 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="hidden md:block justify-self-end">
+      <div className="justify-self-end md:justify-self-end">
         <img 
           src="/images/profile.jpeg" 
           alt="Profile picture" 
-          className="mt-8 w-full object-cover aspect-square"
+          className="mt-8 w-48 md:w-full mx-auto md:mx-0 object-cover aspect-square"
         />
       </div>
     </div>
