@@ -3,6 +3,32 @@ import { PROJECTS } from '../constants';
 import { ExternalLink } from 'lucide-react';
 
 export const Projects: React.FC = () => {
+  const renderDescription = (description: string) => {
+    // First handle underline + bold: __**text**__
+    let result: React.ReactNode[] = [];
+    const parts = description.split(/__(\*\*.*?\*\*)__/);
+    
+    parts.forEach((part, index) => {
+      if (index % 2 === 1) {
+        // This is underlined bold text
+        const boldText = part.replace(/\*\*/g, '');
+        result.push(<u key={index}><strong>{boldText}</strong></u>);
+      } else {
+        // Check for remaining ** (bold only)
+        const boldParts = part.split(/\*\*(.*?)\*\*/);
+        boldParts.forEach((boldPart, boldIndex) => {
+          if (boldIndex % 2 === 1) {
+            result.push(<strong key={`${index}-${boldIndex}`}>{boldPart}</strong>);
+          } else if (boldPart) {
+            result.push(boldPart);
+          }
+        });
+      }
+    });
+    
+    return <>{result}</>;
+  };
+
   return (
     <div className="space-y-16">
        <div className="grid md:grid-cols-12 gap-12 items-end">
@@ -19,7 +45,7 @@ export const Projects: React.FC = () => {
                   {project.title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed">
-                  {project.description}
+                  {renderDescription(project.description)}
                 </p>
                 <div className="flex gap-3 text-xs font-mono text-text-secondary pt-2">
                   {project.tags.map(tag => <span key={tag}>{tag}</span>)}

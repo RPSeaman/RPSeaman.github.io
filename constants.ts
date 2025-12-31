@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
   {
     id: '1',
     title: 'A cloud-based training module for efficient de novo transcriptome assembly using Nextflow and Google Cloud',
-    description: 'Seaman RP, Campbell R, Doe V, Yosufzai Z, Graber JH',
+    description: '__**Seaman RP**__, Campbell R, Doe V, Yosufzai Z, Graber JH',
     tags: ['Transcriptome Assembly', 'GCP', 'Nextflow'],
     imageUrl: './images/SEQ.jpg',
     link: 'https://pubmed.ncbi.nlm.nih.gov/38941113',
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
   {
     id: '2',
     title: 'The essential role of connective-tissue cells during axolotl limb regeneration',
-    description: 'García-García D, Knapp D, Kim M, Jamwal K, Fuqua H, Seaman RP, Grindle RE, Nowoshilow S, Novatchkova M, Kolling FW, Graber JH, Murawala P',
+    description: 'García-García D, Knapp D, Kim M, Jamwal K, Fuqua H, __**Seaman RP**__, Grindle RE, Nowoshilow S, Novatchkova M, Kolling FW, Graber JH, Murawala P',
     tags: ['Axolotl', 'SCRNAseq', 'Spatial'],
     imageUrl: './images/AXO.jpeg',
     link: 'https://pubmed.ncbi.nlm.nih.gov/40236065',
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
   {
     id: '3',
     title: 'SGLT2 Inhibition Ameliorates Age-Dependent Renovascular Rarefaction',
-    description: 'Paulmann A, Cox MD, Boewer T, Somers HM, Fuqua H, Seaman RP, Graber JH, Mahajan A, Johnson CP, Beverly-Staggs LL, Sandhi S, Schenk H, Haller H',
+    description: 'Paulmann A, Cox MD, Boewer T, Somers HM, Fuqua H, __**Seaman RP**__, Graber JH, Mahajan A, Johnson CP, Beverly-Staggs LL, Sandhi S, Schenk H, Haller H',
     tags: ['African Truquoise Killifish', 'SCRNAseq'],
     imageUrl: './images/ATK.jpg',
     link: 'https://pubmed.ncbi.nlm.nih.gov/40667048',
