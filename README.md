@@ -16,18 +16,6 @@ A modern, responsive portfolio website showcasing biomedical informatics experti
 
 ---
 
-## About
-
-This is a professional portfolio website built with modern web technologies, featuring:
-- **Biomedical Informatics** expertise and background
-- **Interactive project showcase** with descriptions and links
-- **Skills and experience** visualization
-- **Contact information** and social media links
-- **Responsive design** for all devices
-- **Dark theme** with elegant typography
-
----
-
 ## Tech Stack
 
 - **React 18** - UI library
@@ -77,7 +65,7 @@ This site is deployed on **GitHub Pages** and accessible at [rpseaman.com](https
 ## Contact
 
 Feel free to reach out:
-- 📧 Email: [your-email]
+- 📧 Email: [ryan.patrick.seaman@gmail.com](mailto:ryan.patrick.seaman@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/ryanpseaman](https://linkedin.com/in/ryanpseaman)
 - 🐙 GitHub: [github.com/RPSeaman](https://github.com/RPSeaman)
 - 📸 Instagram: [@ryanpseaman](https://instagram.com/ryanpseaman)
