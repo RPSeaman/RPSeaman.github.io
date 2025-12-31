@@ -7,7 +7,7 @@ export const Projects: React.FC = () => {
     <div className="space-y-16">
        <div className="grid md:grid-cols-12 gap-12 items-end">
         <div className="md:col-span-4">
-          <h2 className="text-sm font-mono text-text-secondary uppercase tracking-widest">Selected Work</h2>
+          <h2 className="text-sm font-mono text-text-secondary uppercase tracking-widest">Selected Publications</h2>
         </div>
       </div>
 
@@ -26,7 +26,7 @@ export const Projects: React.FC = () => {
                 </div>
                 <div className="pt-4">
                   <a href={project.link} className="inline-flex items-center gap-2 text-sm text-text-primary hover:opacity-70 transition-opacity">
-                    View Project <ExternalLink className="w-3 h-3" />
+                    View Publication <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
              </div>

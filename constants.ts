@@ -1,4 +1,4 @@
-import { Project, Skill, SocialLink } from './types';
+import { Project, Skill, SocialLink, Education, WorkExperience } from './types';
 
 export const PORTFOLIO_OWNER = "Ryan Seaman";
 export const OWNER_ROLE = "Biomedical Informatics";
@@ -25,34 +25,36 @@ export const SKILLS: Skill[] = [
   { name: 'git/GitHub', category: 'Tools', level: 85 },
   { name: 'Google Cloud Platform', category: 'Platforms', level: 80 },
   { name: 'Amazon Web Services', category: 'Platforms', level: 80 },
+  { name: 'Slurm', category: 'Platforms', level: 80 },
+
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'Nebula Dashboard',
-    description: 'Real-time IoT analytics.',
-    tags: ['React', 'D3.js', 'WebSockets'],
-    imageUrl: 'https://picsum.photos/600/400?grayscale&random=1',
-    link: '#',
+    title: 'A cloud-based training module for efficient de novo transcriptome assembly using Nextflow and Google Cloud',
+    description: 'Seaman RP, Campbell R, Doe V, Yosufzai Z, Graber JH',
+    tags: ['Transcriptome Assembly', 'GCP', 'Nextflow'],
+    imageUrl: './images/SEQ.jpg',
+    link: 'https://pubmed.ncbi.nlm.nih.gov/38941113',
     github: '#'
   },
   {
     id: '2',
-    title: 'Minimal Notes',
-    description: 'Markdown based note-taking app.',
-    tags: ['React', 'LocalFirst'],
-    imageUrl: 'https://picsum.photos/600/400?grayscale&random=2',
-    link: '#',
+    title: 'The essential role of connective-tissue cells during axolotl limb regeneration',
+    description: 'García-García D, Knapp D, Kim M, Jamwal K, Fuqua H, Seaman RP, Grindle RE, Nowoshilow S, Novatchkova M, Kolling FW, Graber JH, Murawala P',
+    tags: ['Axolotl', 'SCRNAseq', 'Spatial'],
+    imageUrl: './images/AXO.jpeg',
+    link: 'https://pubmed.ncbi.nlm.nih.gov/40236065',
     github: '#'
   },
   {
     id: '3',
-    title: 'Sonic Scapes',
-    description: 'Generative audio visualization.',
-    tags: ['Web Audio', 'Canvas'],
-    imageUrl: 'https://picsum.photos/600/400?grayscale&random=3',
-    link: '#',
+    title: 'SGLT2 Inhibition Ameliorates Age-Dependent Renovascular Rarefaction',
+    description: 'Paulmann A, Cox MD, Boewer T, Somers HM, Fuqua H, Seaman RP, Graber JH, Mahajan A, Johnson CP, Beverly-Staggs LL, Sandhi S, Schenk H, Haller H',
+    tags: ['African Truquoise Killifish', 'SCRNAseq'],
+    imageUrl: './images/ATK.jpg',
+    link: 'https://pubmed.ncbi.nlm.nih.gov/40667048',
     github: '#'
   }
 ];
@@ -62,4 +64,34 @@ export const SOCIALS: SocialLink[] = [
   { platform: 'LinkedIn', url: 'https://linkedin.com/in/ryanpseaman', icon: 'linkedin' },
   { platform: 'Instagram', url: 'https://instagram.com/ryanpseaman', icon: 'instagram' },
 
+];
+
+export const EDUCATION: Education[] = [
+  {
+    school: 'Harvard Medical School',
+    degree: 'MMSc. Biomedical Informatics',
+    location: 'Boston, MA',
+    graduationDate: 'Expected Graduation May 2027'
+  },
+  {
+    school: 'Colby College',
+    degree: 'B.A. Computational Biology',
+    location: 'Waterville, ME',
+    graduationDate: 'January 2023'
+  }
+];
+
+export const WORK_EXPERIENCE: WorkExperience[] = [
+  {
+    position: 'Bioinformatician, Comparative Genomic and Data Science Core',
+    organization: 'MDI Biological Laboratory',
+    location: 'Bar Harbor, ME',
+    period: 'January 2023 – August 2025'
+  },
+  {
+    position: 'Research Assistant, Chang Lab',
+    organization: 'Department of Geology, Portland State University',
+    location: 'Portland, OR',
+    period: 'May – August 2017'
+  }
 ];

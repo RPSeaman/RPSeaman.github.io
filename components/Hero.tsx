@@ -26,6 +26,17 @@ export const Hero: React.FC = () => {
             View Projects <ArrowRight className="w-4 h-4" />
           </a>
         </div>
+        
+        <div className="flex flex-wrap gap-6">
+          <a
+            href="/files/RyanSeamanCV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-text-primary border-b border-white hover:opacity-70 transition-opacity flex items-center gap-2 pb-1"
+          >
+            View CV <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
 
         <div className="flex gap-6 pt-12">
           <a href="https://github.com/RPSeaman" className="text-text-secondary hover:text-text-primary transition-colors"><Github className="w-5 h-5" /></a>

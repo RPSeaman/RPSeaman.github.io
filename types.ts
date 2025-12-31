@@ -19,3 +19,17 @@ export interface SocialLink {
   url: string;
   icon: string;
 }
+
+export interface Education {
+  school: string;
+  degree: string;
+  location: string;
+  graduationDate: string;
+}
+
+export interface WorkExperience {
+  position: string;
+  organization: string;
+  location: string;
+  period: string;
+}

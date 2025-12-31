@@ -3,7 +3,10 @@ import React from 'react';
 export const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'About', href: '#about' },
-    { name: 'Work', href: '#projects' },
+    { name: 'Education', href: '#education' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Expertise', href: '#skills' },
+    { name: 'Publications', href: '#projects' },
   ];
 
   return (
