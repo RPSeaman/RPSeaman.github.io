@@ -4,7 +4,7 @@ from datetime import datetime
 # Configuration
 BASE_URL = "https://rpseaman.com/"
 ROOT_DIR = "./"  # The directory containing your .html files
-OUTPUT_FILE = "sitemap.xml"
+OUTPUT_FILE = "public/sitemap.xml"
 EXTENSIONS = (".html", ".htm")
 
 def generate_sitemap():
