@@ -13,11 +13,11 @@ export const SKILLS: Skill[] = [
   { name: '10x Visium', category: 'Modalities', level: 95 },
   { name: '10x Xenium', category: 'Modalities', level: 95 },
   { name: '10x Multiome', category: 'Modalities', level: 95 },
-  { name: 'Python', category: 'Langauges', level: 85 },
-  { name: 'R', category: 'Langauges', level: 80 },
-  { name: 'Java', category: 'Langauges', level: 80 },
-  { name: 'Groovy', category: 'Langauges', level: 80 },
-  { name: 'Bash', category: 'Langauges', level: 80 },
+  { name: 'Python', category: 'Languages', level: 85 },
+  { name: 'R', category: 'Languages', level: 80 },
+  { name: 'Java', category: 'Languages', level: 80 },
+  { name: 'Groovy', category: 'Languages', level: 80 },
+  { name: 'Bash', category: 'Languages', level: 80 },
   { name: 'Nextflow', category: 'Tools', level: 75 },
   { name: 'nf-core', category: 'Tools', level: 85 },
   { name: 'command line', category: 'Tools', level: 85 },
@@ -62,6 +62,7 @@ export const PROJECTS: Project[] = [
 export const SOCIALS: SocialLink[] = [
   { platform: 'GitHub', url: 'https://github.com/RPSeaman', icon: 'github' },
   { platform: 'LinkedIn', url: 'https://linkedin.com/in/ryanpseaman', icon: 'linkedin' },
+  { platform: 'ORCID', url: 'https://orcid.org/0009-0006-1204-4176', icon: 'orcid' },
   { platform: 'Instagram', url: 'https://instagram.com/ryanpseaman', icon: 'instagram' },
 
 ];

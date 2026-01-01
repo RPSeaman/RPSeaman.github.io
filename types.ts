@@ -10,7 +10,7 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  category: 'Modalities' | 'Langauges' | 'Tools' | 'Platforms';
+  category: 'Modalities' | 'Languages' | 'Tools' | 'Platforms';
   level: number; // 0-100
 }
 
