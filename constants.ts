@@ -50,11 +50,11 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: 'SGLT2 Inhibition Ameliorates Age-Dependent Renovascular Rarefaction',
+    title: 'Sodium-glucose co-transporter 2 inhibition improves age-dependent kidney microvascular rarefaction',
     description: 'Paulmann A, Cox MD, Boewer T, Somers HM, Fuqua H, __**Seaman RP**__, Graber JH, Mahajan A, Johnson CP, Beverly-Staggs LL, Sandhi S, Schenk H, Haller H',
     tags: ['African Truquoise Killifish', 'SCRNAseq'],
     imageUrl: './images/ATK.jpg',
-    link: 'https://pubmed.ncbi.nlm.nih.gov/40667048',
+    link: 'https://pubmed.ncbi.nlm.nih.gov/41448458/',
     github: '#'
   }
 ];
