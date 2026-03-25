@@ -10,12 +10,12 @@ const getOrgLogo = (organization: string) => {
         className="w-16 mb-4 opacity-80 hover:opacity-100 transition-opacity grayscale"
       />
     );
-  } else if (organization.includes('Portland State')) {
+  } else if (organization.includes('Harvard Medical School')) {
     return (
-      <img 
-        src="/images/PSU.png" 
-        alt="Portland State University" 
-        className="w-16 mb-4 opacity-80 hover:opacity-100 transition-opacity grayscale"
+      <img
+        src="/images/HIDIVE.png"
+        alt="HIDIVE Lab"
+        className="w-16 mb-4 opacity-80 hover:opacity-100 transition-opacity invert"
       />
     );
   }

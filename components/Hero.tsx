@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
     <div className="grid md:grid-cols-3 gap-12 items-center w-full">
       <div className="space-y-8 md:col-span-2">
         <div className="inline-block border-b border-text-secondary pb-1">
-           <span className="text-text-secondary text-sm font-mono">Based in Cambridge</span>
+           <span className="text-text-secondary text-sm font-mono">Based in Boston</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-text-primary leading-[1.1]">
@@ -20,12 +20,12 @@ export const Hero: React.FC = () => {
 
         <div className="flex flex-wrap gap-6 pt-4">
           <a
-            href="/files/RyanSeamanCV.pdf"
+            href="/files/RyanSeamanResume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-text-primary border-b border-white hover:opacity-70 transition-opacity flex items-center gap-2 pb-1"
           >
-            View CV <ArrowRight className="w-4 h-4" />
+            View Resume <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 

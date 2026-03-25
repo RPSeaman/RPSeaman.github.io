@@ -4,7 +4,7 @@ export const PORTFOLIO_OWNER = "Ryan Seaman";
 export const OWNER_ROLE = "Biomedical Informatics";
 
 export const BIO = `
-As a professional in Biomedical Informatics, my core mission is translating complex biological data into actionable insights. My current focus centers on the crucial step of data visualization, particularly in the realm of spatial data analysis. I specialize in developing and deploying interactive visualization tools that effectively communicate the intricate patterns and relationships hidden within large genomic or clinical datasets. By making these complex data structures geographically intuitive, I aim to provide researchers with clear, accessible views that accelerate biological discovery and inform clinical decision-making.
+Computational biologist and data scientist pursuing an MMSc in Biomedical Informatics at Harvard Medical School. Experienced in bioinformatics pipelines, cloud infrastructure, machine learning, and single-cell genomics, with current thesis work applying multi-agent LLM systems to automated data visualization.
 `;
 
 export const SKILLS: Skill[] = [
@@ -84,15 +84,15 @@ export const EDUCATION: Education[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
+    position: 'Thesis Research, HIDIVE Lab',
+    organization: 'Harvard Medical School, Dr. Nils Gehlenborg',
+    location: 'Boston, MA',
+    period: 'December 2025 – Present'
+  },
+  {
     position: 'Bioinformatician, Comparative Genomic and Data Science Core',
     organization: 'MDI Biological Laboratory',
     location: 'Bar Harbor, ME',
     period: 'January 2023 – August 2025'
-  },
-  {
-    position: 'Research Assistant, Chang Lab',
-    organization: 'Department of Geology, Portland State University',
-    location: 'Portland, OR',
-    period: 'May – August 2017'
   }
 ];
