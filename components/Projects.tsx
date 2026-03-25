@@ -39,7 +39,7 @@ export const Projects: React.FC = () => {
 
       <div className="space-y-20">
         {PROJECTS.map((project) => (
-          <div key={project.id} className="grid md:grid-cols-12 gap-8 group">
+          <div key={project.id} className="grid md:grid-cols-12 gap-8 group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.04)] rounded-lg p-4 -m-4">
              <div className="md:col-span-4 space-y-4">
                 <h3 className="text-2xl font-semibold text-text-primary group-hover:text-white transition-colors">
                   {project.title}

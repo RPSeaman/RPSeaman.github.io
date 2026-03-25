@@ -7,7 +7,7 @@ const getSchoolLogo = (schoolName: string) => {
       <img 
         src="/images/HMS.png" 
         alt="Harvard Medical School" 
-        className="w-16 mb-4 opacity-80 hover:opacity-100 transition-opacity grayscale"
+        className="w-16 mb-4 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-500"
       />
     );
   } else if (schoolName.includes('Colby')) {
@@ -15,7 +15,7 @@ const getSchoolLogo = (schoolName: string) => {
       <img 
         src="/images/CC.png" 
         alt="Colby College" 
-        className="w-16 mb-4 opacity-80 hover:opacity-100 transition-opacity grayscale"
+        className="w-16 mb-4 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-500"
       />
     );
   }

@@ -6,19 +6,19 @@ export const Hero: React.FC = () => {
   return (
     <div className="grid md:grid-cols-3 gap-12 items-center w-full">
       <div className="space-y-8 md:col-span-2">
-        <div className="inline-block border-b border-text-secondary pb-1">
+        <div className="inline-block border-b border-text-secondary pb-1 animate-hero-fade-in opacity-0" style={{ animationDelay: '200ms' }}>
            <span className="text-text-secondary text-sm font-mono">Based in Boston</span>
         </div>
-        
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-text-primary leading-[1.1]">
+
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-text-primary leading-[1.1] animate-hero-fade-in opacity-0" style={{ animationDelay: '400ms' }}>
           {PORTFOLIO_OWNER}
         </h1>
-        
-        <p className="text-xl md:text-2xl text-text-secondary font-light">
+
+        <p className="text-xl md:text-2xl text-text-secondary font-light animate-hero-fade-in opacity-0" style={{ animationDelay: '600ms' }}>
           {OWNER_ROLE}. Translating complex biological data into actionable insights.
         </p>
 
-        <div className="flex flex-wrap gap-6 pt-4">
+        <div className="flex flex-wrap gap-6 pt-4 animate-hero-fade-in opacity-0" style={{ animationDelay: '800ms' }}>
           <a
             href="/files/RyanSeamanResume.pdf"
             target="_blank"
@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
           </a>
         </div>
 
-        <div className="flex gap-6 pt-12">
+        <div className="flex gap-6 pt-12 animate-hero-fade-in opacity-0" style={{ animationDelay: '1000ms' }}>
           <a href="https://github.com/RPSeaman" className="text-text-secondary hover:text-text-primary transition-colors"><Github className="w-5 h-5" /></a>
           <a href="https://linkedin.com/in/ryanpseaman" className="text-text-secondary hover:text-text-primary transition-colors"><Linkedin className="w-5 h-5" /></a>
           <a href="https://orcid.org/0009-0006-1204-4176" className="text-text-secondary hover:text-text-primary transition-colors">
@@ -41,10 +41,10 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="justify-self-end md:justify-self-end">
-        <img 
-          src="/images/profile.jpeg" 
-          alt="Profile picture" 
+      <div className="justify-self-end md:justify-self-end animate-hero-fade-in opacity-0" style={{ animationDelay: '500ms' }}>
+        <img
+          src="/images/profile.jpeg"
+          alt="Profile picture"
           className="mt-8 w-48 md:w-full mx-auto md:mx-0 object-cover aspect-square"
         />
       </div>

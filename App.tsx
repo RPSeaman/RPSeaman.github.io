@@ -9,6 +9,16 @@ import { Skills } from './components/Skills';
 import { Contact } from './components/Contact';
 import { SOCIALS } from './constants';
 import { Github, Linkedin, Instagram } from 'lucide-react';
+import { useScrollAnimation } from './hooks/useScrollAnimation';
+
+const AnimatedSection: React.FC<{ id: string; className: string; children: React.ReactNode }> = ({ id, className, children }) => {
+  const ref = useScrollAnimation();
+  return (
+    <section id={id} ref={ref} className={`animate-on-scroll ${className}`}>
+      {children}
+    </section>
+  );
+};
 
 const App: React.FC = () => {
   const getIcon = (iconName: string) => {
@@ -29,45 +39,45 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-bg-primary selection:bg-white selection:text-black">
       <div className="relative z-10">
         <Navbar />
-        
+
         <main className="max-w-5xl mx-auto px-6 sm:px-8">
           <section id="hero" className="min-h-[80vh] flex flex-col justify-center border-b border-border-color">
             <Hero />
           </section>
 
-          <section id="about" className="py-24 border-b border-border-color">
+          <AnimatedSection id="about" className="py-24 border-b border-border-color">
             <About />
-          </section>
+          </AnimatedSection>
 
-          <section id="education" className="py-24 border-b border-border-color">
+          <AnimatedSection id="education" className="py-24 border-b border-border-color">
             <Education />
-          </section>
+          </AnimatedSection>
 
-          <section id="experience" className="py-24 border-b border-border-color">
+          <AnimatedSection id="experience" className="py-24 border-b border-border-color">
             <Experience />
-          </section>
+          </AnimatedSection>
 
-          <section id="skills" className="py-24 border-b border-border-color">
+          <AnimatedSection id="skills" className="py-24 border-b border-border-color">
             <Skills />
-          </section>
+          </AnimatedSection>
 
-          <section id="projects" className="py-24 border-b border-border-color">
+          <AnimatedSection id="projects" className="py-24 border-b border-border-color">
             <Projects />
-          </section>
+          </AnimatedSection>
 
-          <section id="contact" className="py-24 mb-20">
+          <AnimatedSection id="contact" className="py-24 mb-20">
             <Contact />
-          </section>
+          </AnimatedSection>
         </main>
 
         <footer className="py-12 border-t border-border-color bg-bg-primary">
           <div className="max-w-5xl mx-auto px-6 sm:px-8 flex flex-col items-center gap-8">
             <div className="flex gap-6">
               {SOCIALS.map((social) => (
-                <a 
-                  key={social.platform} 
-                  href={social.url} 
-                  target="_blank" 
+                <a
+                  key={social.platform}
+                  href={social.url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-secondary hover:text-text-primary transition-colors p-2 hover:bg-white/5 rounded-full"
                   aria-label={social.platform}

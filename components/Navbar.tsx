@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -12,8 +14,37 @@ export const Navbar: React.FC = () => {
     { name: 'Publications', href: '#projects' },
   ];
 
+  const sectionIds = ['about', 'education', 'experience', 'skills', 'projects', 'contact'];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      { rootMargin: '-20% 0px -60% 0px' }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleLinkClick = () => {
     setIsOpen(false);
+  };
+
+  const getLinkClass = (href: string) => {
+    const id = href.replace('#', '');
+    const isActive = activeSection === id;
+    return `text-sm transition-colors ${isActive ? 'text-text-primary' : 'text-text-secondary hover:text-text-primary'}`;
   };
 
   return (
@@ -30,7 +61,7 @@ export const Navbar: React.FC = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                  className={getLinkClass(link.href)}
                 >
                   {link.name}
                 </a>
@@ -38,11 +69,15 @@ export const Navbar: React.FC = () => {
             </div>
             <a
               href="#contact"
-              className="hidden md:block text-sm font-medium text-text-primary hover:text-white transition-colors border border-border-color px-4 py-2 rounded hover:bg-white/5"
+              className={`hidden md:block text-sm font-medium transition-colors border px-4 py-2 rounded ${
+                activeSection === 'contact'
+                  ? 'text-white border-white bg-white/10'
+                  : 'text-text-primary border-border-color hover:text-white hover:bg-white/5'
+              }`}
             >
               Contact
             </a>
-            
+
             {/* Mobile hamburger button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -56,29 +91,32 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden border-t border-border-color bg-bg-primary">
-          <div className="px-6 py-4 space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={handleLinkClick}
-                className="block text-sm text-text-secondary hover:text-text-primary transition-colors py-2"
-              >
-                {link.name}
-              </a>
-            ))}
+      <div
+        ref={menuRef}
+        className={`md:hidden border-t border-border-color bg-bg-primary overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 border-t-0'
+        }`}
+      >
+        <div className="px-6 py-4 space-y-4">
+          {navLinks.map((link) => (
             <a
-              href="#contact"
+              key={link.name}
+              href={link.href}
               onClick={handleLinkClick}
-              className="block text-sm font-medium text-text-primary hover:text-white transition-colors border border-border-color px-4 py-2 rounded hover:bg-white/5 text-center"
+              className={`block py-2 ${getLinkClass(link.href)}`}
             >
-              Contact
+              {link.name}
             </a>
-          </div>
+          ))}
+          <a
+            href="#contact"
+            onClick={handleLinkClick}
+            className="block text-sm font-medium text-text-primary hover:text-white transition-colors border border-border-color px-4 py-2 rounded hover:bg-white/5 text-center"
+          >
+            Contact
+          </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
