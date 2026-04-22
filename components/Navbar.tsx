@@ -1,22 +1,27 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const menuRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Expertise', href: '#skills' },
-    { name: 'Publications', href: '#projects' },
+    { name: 'About', id: 'about' },
+    { name: 'Education', id: 'education' },
+    { name: 'Experience', id: 'experience' },
+    { name: 'Expertise', id: 'skills' },
+    { name: 'Publications', id: 'projects' },
   ];
 
   const sectionIds = ['about', 'education', 'experience', 'skills', 'projects', 'contact'];
 
   useEffect(() => {
+    if (location.pathname !== '/') return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
@@ -35,14 +40,27 @@ export const Navbar: React.FC = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
 
-  const handleLinkClick = () => {
+  const scrollToSection = (id: string) => {
     setIsOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: id } });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
-  const getLinkClass = (href: string) => {
-    const id = href.replace('#', '');
+  const scrollToTop = () => {
+    setIsOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const getLinkClass = (id: string) => {
     const isActive = activeSection === id;
     return `text-sm transition-colors ${isActive ? 'text-text-primary' : 'text-text-secondary hover:text-text-primary'}`;
   };
@@ -51,24 +69,24 @@ export const Navbar: React.FC = () => {
     <nav className="fixed top-0 w-full z-50 bg-bg-primary/90 backdrop-blur-sm border-b border-border-color">
       <div className="max-w-5xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="font-bold text-lg tracking-tight text-text-primary">
+          <button onClick={scrollToTop} className="font-bold text-lg tracking-tight text-text-primary">
             Ryan Seaman
-          </a>
+          </button>
 
           <div className="flex items-center space-x-8">
             <div className="hidden md:flex space-x-8">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  className={getLinkClass(link.href)}
+                  onClick={() => scrollToSection(link.id)}
+                  className={getLinkClass(link.id)}
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
             </div>
-            <a
-              href="#contact"
+            <button
+              onClick={() => scrollToSection('contact')}
               className={`hidden md:block text-sm font-medium transition-colors border px-4 py-2 rounded ${
                 activeSection === 'contact'
                   ? 'text-white border-white bg-white/10'
@@ -76,7 +94,7 @@ export const Navbar: React.FC = () => {
               }`}
             >
               Contact
-            </a>
+            </button>
 
             {/* Mobile hamburger button */}
             <button
@@ -99,22 +117,20 @@ export const Navbar: React.FC = () => {
       >
         <div className="px-6 py-4 space-y-4">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              onClick={handleLinkClick}
-              className={`block py-2 ${getLinkClass(link.href)}`}
+              onClick={() => scrollToSection(link.id)}
+              className={`block w-full text-left py-2 ${getLinkClass(link.id)}`}
             >
               {link.name}
-            </a>
+            </button>
           ))}
-          <a
-            href="#contact"
-            onClick={handleLinkClick}
-            className="block text-sm font-medium text-text-primary hover:text-white transition-colors border border-border-color px-4 py-2 rounded hover:bg-white/5 text-center"
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="block w-full text-sm font-medium text-text-primary hover:text-white transition-colors border border-border-color px-4 py-2 rounded hover:bg-white/5 text-center"
           >
             Contact
-          </a>
+          </button>
         </div>
       </div>
     </nav>

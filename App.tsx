@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -21,6 +22,18 @@ const AnimatedSection: React.FC<{ id: string; className: string; children: React
 };
 
 const App: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const state = location.state as { scrollTo?: string } | null;
+    if (state?.scrollTo) {
+      const el = document.getElementById(state.scrollTo);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 50);
+      }
+    }
+  }, [location.state]);
+
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'github': return <Github className="w-5 h-5" />;

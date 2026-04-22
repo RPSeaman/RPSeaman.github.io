@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
 
 export const Projects: React.FC = () => {
   const renderDescription = (description: string) => {
@@ -31,14 +32,19 @@ export const Projects: React.FC = () => {
 
   return (
     <div className="space-y-16">
-       <div className="grid md:grid-cols-12 gap-12 items-end">
-        <div className="md:col-span-4">
-          <h2 className="text-sm font-mono text-text-secondary uppercase tracking-widest">Selected Publications</h2>
-        </div>
+       <div className="flex items-center justify-between">
+        <h2 className="text-sm font-mono text-text-secondary uppercase tracking-widest">Selected Publications</h2>
+        <Link
+          to="/publications"
+          className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary transition-colors group"
+        >
+          View all
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </Link>
       </div>
 
       <div className="space-y-20">
-        {PROJECTS.map((project) => (
+        {PROJECTS.filter(p => p.featured).map((project) => (
           <div key={project.id} className="grid md:grid-cols-12 gap-8 group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.04)] rounded-lg p-4 -m-4">
              <div className="md:col-span-4 space-y-4">
                 <h3 className="text-2xl font-semibold text-text-primary group-hover:text-white transition-colors">
@@ -68,6 +74,7 @@ export const Projects: React.FC = () => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };

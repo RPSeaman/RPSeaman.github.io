@@ -3,9 +3,13 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  imageUrl: string;
+  imageUrl?: string;
   link?: string;
   github?: string;
+  journal?: string;
+  citation?: string;
+  year?: string;
+  featured?: boolean;
 }
 
 export interface Skill {

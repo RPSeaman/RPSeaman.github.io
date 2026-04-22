@@ -31,31 +31,62 @@ export const SKILLS: Skill[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: '6',
+    title: 'Injury-induced Cxcl11 and neutrophil signaling drive zebrafish kidney regeneration by generating a nephrogenic niche of Fgf and Wnt expression',
+    description: 'Olajuyin O, Schenk H, Sampson WGB, Adekeye O, Kamei CN, Upadhyay RM, Kennedy R, Morrison E, Callahan R, Bonnet F, Graber J, __**Seaman R**__, Fuqua H, Wheeler R, Oxburgh L, Drummond IA',
+    tags: ['Zebrafish', 'Kidney Regeneration', 'scRNAseq'],
+    link: 'https://pubmed.ncbi.nlm.nih.gov/41993248',
+    journal: 'bioRxiv',
+    citation: 'bioRxiv [Preprint]. 2026 Apr 10:2026.04.08.717325',
+    year: '2026',
+    featured: false
+  },
+  {
+    id: '5',
+    title: 'Sexually Dimorphic Response to Dietary Restriction-induced Longevity and Muscle Rejuvenation in Nothobranchius furzeri',
+    description: 'Sandhi S, Somers H, Cox M, Nobrega C, __**Seaman R**__, Bakers E, Letchner O, Reeve R, Menard R, Godwin J, Paulmann A, Rogers A, Valenzano DR, Graber J, Haller H, Madelaine R',
+    tags: ['Nothobranchius furzeri', 'Dietary Restriction', 'Aging'],
+    link: 'https://pubmed.ncbi.nlm.nih.gov/41727172',
+    journal: 'bioRxiv',
+    citation: 'bioRxiv [Preprint]. 2026 Feb 11:2026.02.09.704879',
+    year: '2026',
+    featured: false
+  },
+  {
+    id: '3',
+    title: 'Sodium-glucose co-transporter 2 inhibition improves age-dependent kidney microvascular rarefaction',
+    description: 'Paulmann A, Cox MD, Boewer T, Somers HM, Fuqua H, __**Seaman RP**__, Graber JH, Mahajan A, Johnson CP, Beverly-Staggs LL, Sandhi S, Schenk H, Haller H',
+    tags: ['African Turquoise Killifish', 'scRNAseq'],
+    imageUrl: './images/ATK.jpg',
+    link: 'https://pubmed.ncbi.nlm.nih.gov/41448458/',
+    journal: 'Kidney Int.',
+    citation: 'Kidney Int. 2026 Mar;109(3):525-544',
+    year: '2026',
+    featured: true
+  },
+  {
+    id: '2',
+    title: 'The essential role of connective-tissue cells during axolotl limb regeneration',
+    description: 'García-García D, Knapp D, Kim M, Jamwal K, Fuqua H, __**Seaman RP**__, Grindle RE, Nowoshilow S, Novatchkova M, Kolling FW, Graber JH, Murawala P',
+    tags: ['Axolotl', 'scRNAseq', 'Spatial'],
+    imageUrl: './images/AXO.jpeg',
+    link: 'https://pubmed.ncbi.nlm.nih.gov/40236065',
+    journal: 'bioRxiv',
+    citation: 'bioRxiv [Preprint]. 2025 Apr 2:2025.03.30.645595',
+    year: '2025',
+    featured: true
+  },
+  {
     id: '1',
     title: 'A cloud-based training module for efficient de novo transcriptome assembly using Nextflow and Google Cloud',
     description: '__**Seaman RP**__, Campbell R, Doe V, Yosufzai Z, Graber JH',
     tags: ['Transcriptome Assembly', 'GCP', 'Nextflow'],
     imageUrl: './images/SEQ.jpg',
     link: 'https://pubmed.ncbi.nlm.nih.gov/38941113',
-    github: '#'
-  },
-  {
-    id: '2',
-    title: 'The essential role of connective-tissue cells during axolotl limb regeneration',
-    description: 'García-García D, Knapp D, Kim M, Jamwal K, Fuqua H, __**Seaman RP**__, Grindle RE, Nowoshilow S, Novatchkova M, Kolling FW, Graber JH, Murawala P',
-    tags: ['Axolotl', 'SCRNAseq', 'Spatial'],
-    imageUrl: './images/AXO.jpeg',
-    link: 'https://pubmed.ncbi.nlm.nih.gov/40236065',
-    github: '#'
-  },
-  {
-    id: '3',
-    title: 'Sodium-glucose co-transporter 2 inhibition improves age-dependent kidney microvascular rarefaction',
-    description: 'Paulmann A, Cox MD, Boewer T, Somers HM, Fuqua H, __**Seaman RP**__, Graber JH, Mahajan A, Johnson CP, Beverly-Staggs LL, Sandhi S, Schenk H, Haller H',
-    tags: ['African Truquoise Killifish', 'SCRNAseq'],
-    imageUrl: './images/ATK.jpg',
-    link: 'https://pubmed.ncbi.nlm.nih.gov/41448458/',
-    github: '#'
+    journal: 'Briefings in Bioinformatics',
+    citation: 'Brief Bioinform. 2024 May 23;25(4):bbae313',
+    year: '2024',
+    featured: true
   }
 ];
 
