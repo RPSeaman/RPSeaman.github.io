@@ -96,7 +96,7 @@ export const SoftwareProjectsPage: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs text-text-secondary hover:text-text-primary transition-colors"
                     >
-                      <ExternalLink className="w-3.5 h-3.5" /> Live
+                      <ExternalLink className="w-3.5 h-3.5" /> {project.linkLabel ?? 'Live'}
                     </a>
                   )}
                   {project.status && (

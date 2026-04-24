@@ -50,4 +50,5 @@ export interface SoftwareProject {
   status?: 'active' | 'completed' | 'archived';
   featured?: boolean;
   imageBg?: string;
+  linkLabel?: string;
 }

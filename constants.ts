@@ -94,7 +94,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp4',
     title: 'VitessceGen',
-    description: 'MMSc thesis project at the HIDIVE Lab, Harvard Medical School. VitessceGen uses a multi-agent LLM pipeline to automatically generate Vitessce visualization configurations from biomedical datasets. Coordinated agents analyze dataset structure, select appropriate visualization components, and produce ready-to-render Vitessce schemas for spatial and single-cell genomic data — removing the need for manual configuration.',
+    description: 'MMSc thesis project at the HIDIVE Lab, Harvard Medical School. VitessceGen uses a multi-agent LLM pipeline to automatically generate Vitessce visualization configurations from biomedical datasets. Coordinated agents analyze dataset structure, select appropriate visualization components, and produce ready-to-render Vitessce schemas for spatial and single-cell genomic data, removing the need for manual configuration.',
     tags: ['LLM', 'Multi-Agent', 'Vitessce', 'Data Visualization', 'Python'],
     imageUrl: './images/VitessceGen.png',
     imageBg: 'bg-white',
@@ -105,7 +105,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp1',
     title: 'AperioVis',
-    description: 'Interactive visualization platform for processed scRNA-seq datasets. Enables wet-lab researchers to interrogate high-dimensional genomic data directly — no programming required. Ingests QC-normalized, dimensionality-reduced datasets and exposes them through an intuitive interface, removing the bioinformatician bottleneck from every visualization request.',
+    description: 'Interactive visualization platform for processed scRNA-seq datasets. Enables wet-lab researchers to interrogate high-dimensional genomic data directly, no programming required. Ingests QC-normalized, dimensionality-reduced datasets and exposes them through an intuitive interface, removing the bioinformatician bottleneck from every visualization request.',
     tags: ['Shiny for Python', 'scRNAseq', 'Data Visualization'],
     imageUrl: './images/AperioVis.png',
     imageBg: 'bg-white',
@@ -117,7 +117,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp2',
     title: 'scscape',
-    description: 'nf-core Nextflow pipeline for multi-sample single-cell RNA-seq analysis downstream of count matrix generation. Built on the Seurat R package, the pipeline handles QC, normalization, doublet removal, SCTransform, PCA, integration, clustering (Louvain), and dimensionality reduction — producing analysis-ready Seurat objects with cell clusters and expression projections.',
+    description: 'nf-core Nextflow pipeline for multi-sample single-cell RNA-seq analysis downstream of count matrix generation. Built on the Seurat R package, the pipeline handles QC, normalization, doublet removal, SCTransform, PCA, integration, clustering (Louvain), and dimensionality reduction, producing analysis-ready Seurat objects with cell clusters and expression projections.',
     tags: ['Nextflow', 'nf-core', 'Seurat', 'scRNAseq', 'R'],
     imageUrl: './images/scscape.png',
     imageBg: 'bg-white',
@@ -127,9 +127,22 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
     featured: false
   },
   {
+    id: 'sp5',
+    title: 'Cadence Health',
+    description: 'A digital health venture focused on making continuous, personalized health monitoring accessible. Cadence Health transforms raw biosignal data into meaningful health insights, empowering individuals to understand and act on their health in real time.',
+    tags: ['Digital Health', 'Health Tech', 'Startup'],
+    imageUrl: './images/CadenceHealth.png',
+    imageBg: 'bg-white',
+    link: 'https://rpseaman.com/cadence-health',
+    linkLabel: 'Prototype',
+    year: '2026',
+    status: 'active',
+    featured: false
+  },
+  {
     id: 'sp3',
     title: 'Personal Website',
-    description: 'This site — built with React, TypeScript, Vite, and Tailwind CSS. Features scroll animations, client-side routing, dedicated pages for publications and projects, and continuous deployment via GitHub Actions to GitHub Pages.',
+    description: 'This site, built with React, TypeScript, Vite, and Tailwind CSS. Features scroll animations, client-side routing, dedicated pages for publications and projects, and continuous deployment via GitHub Actions to GitHub Pages.',
     tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
     imageUrl: './images/Website.png',
     github: 'https://github.com/RPSeaman/RPSeaman.github.io',
