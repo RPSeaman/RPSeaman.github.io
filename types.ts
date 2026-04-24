@@ -37,3 +37,17 @@ export interface WorkExperience {
   location: string;
   period: string;
 }
+
+export interface SoftwareProject {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  github?: string;
+  link?: string;
+  imageUrl?: string;
+  year?: string;
+  status?: 'active' | 'completed' | 'archived';
+  featured?: boolean;
+  imageBg?: string;
+}

@@ -8,7 +8,7 @@ export const Skills: React.FC = () => {
   return (
     <div className="grid md:grid-cols-12 gap-12">
       <div className="md:col-span-4">
-        <h2 className="text-sm font-mono text-text-secondary uppercase tracking-widest">Expertise</h2>
+        <h2 className="text-sm font-mono text-text-secondary uppercase tracking-widest">Skills</h2>
       </div>
       <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-2 gap-8">
         {categories.map((cat) => (

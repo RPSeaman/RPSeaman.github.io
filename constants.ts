@@ -1,4 +1,4 @@
-import { Project, Skill, SocialLink, Education, WorkExperience } from './types';
+import { Project, Skill, SocialLink, Education, WorkExperience, SoftwareProject } from './types';
 
 export const PORTFOLIO_OWNER = "Ryan Seaman";
 export const OWNER_ROLE = "Biomedical Informatics";
@@ -87,6 +87,55 @@ export const PROJECTS: Project[] = [
     citation: 'Brief Bioinform. 2024 May 23;25(4):bbae313',
     year: '2024',
     featured: true
+  }
+];
+
+export const SOFTWARE_PROJECTS: SoftwareProject[] = [
+  {
+    id: 'sp4',
+    title: 'VitessceGen',
+    description: 'MMSc thesis project at the HIDIVE Lab, Harvard Medical School. VitessceGen uses a multi-agent LLM pipeline to automatically generate Vitessce visualization configurations from biomedical datasets. Coordinated agents analyze dataset structure, select appropriate visualization components, and produce ready-to-render Vitessce schemas for spatial and single-cell genomic data — removing the need for manual configuration.',
+    tags: ['LLM', 'Multi-Agent', 'Vitessce', 'Data Visualization', 'Python'],
+    imageUrl: './images/VitessceGen.png',
+    imageBg: 'bg-white',
+    year: '2026',
+    status: 'active',
+    featured: true
+  },
+  {
+    id: 'sp1',
+    title: 'AperioVis',
+    description: 'Interactive visualization platform for processed scRNA-seq datasets. Enables wet-lab researchers to interrogate high-dimensional genomic data directly — no programming required. Ingests QC-normalized, dimensionality-reduced datasets and exposes them through an intuitive interface, removing the bioinformatician bottleneck from every visualization request.',
+    tags: ['Shiny for Python', 'scRNAseq', 'Data Visualization'],
+    imageUrl: './images/AperioVis.png',
+    imageBg: 'bg-white',
+    github: 'https://github.com/RPSeaman/AperioVis',
+    year: '2026',
+    status: 'completed',
+    featured: true
+  },
+  {
+    id: 'sp2',
+    title: 'scscape',
+    description: 'nf-core Nextflow pipeline for multi-sample single-cell RNA-seq analysis downstream of count matrix generation. Built on the Seurat R package, the pipeline handles QC, normalization, doublet removal, SCTransform, PCA, integration, clustering (Louvain), and dimensionality reduction — producing analysis-ready Seurat objects with cell clusters and expression projections.',
+    tags: ['Nextflow', 'nf-core', 'Seurat', 'scRNAseq', 'R'],
+    imageUrl: './images/scscape.png',
+    imageBg: 'bg-white',
+    github: 'https://github.com/mdibl/scscape',
+    year: '2025',
+    status: 'completed',
+    featured: false
+  },
+  {
+    id: 'sp3',
+    title: 'Personal Website',
+    description: 'This site — built with React, TypeScript, Vite, and Tailwind CSS. Features scroll animations, client-side routing, dedicated pages for publications and projects, and continuous deployment via GitHub Actions to GitHub Pages.',
+    tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+    imageUrl: './images/Website.png',
+    github: 'https://github.com/RPSeaman/RPSeaman.github.io',
+    year: '2026',
+    status: 'active',
+    featured: false
   }
 ];
 

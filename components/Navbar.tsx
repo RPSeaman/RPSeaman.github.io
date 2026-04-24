@@ -11,13 +11,15 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'About', id: 'about' },
-    { name: 'Education', id: 'education' },
     { name: 'Experience', id: 'experience' },
-    { name: 'Expertise', id: 'skills' },
-    { name: 'Publications', id: 'projects' },
+    { name: 'Education', id: 'education' },
+    { name: 'Publications', id: 'publications' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Skills', id: 'skills' },
   ];
 
-  const sectionIds = ['about', 'education', 'experience', 'skills', 'projects', 'contact'];
+  const sectionIds = ['about', 'experience', 'education', 'publications', 'projects', 'skills', 'contact'];
+
 
   useEffect(() => {
     if (location.pathname !== '/') return;

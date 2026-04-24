@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ExternalLink, ArrowLeft } from 'lucide-react';
 import { PROJECTS } from '../constants';
+import { Footer } from '../components/Footer';
 
 const renderAuthors = (description: string) => {
   let result: React.ReactNode[] = [];
@@ -32,24 +33,24 @@ export const PublicationsPage: React.FC = () => {
   }, []);
 
   const handleBack = () => {
-    navigate('/', { state: { scrollTo: 'projects' } });
+    navigate('/', { state: { scrollTo: 'publications' } });
   };
 
   return (
     <div className="min-h-screen bg-bg-primary selection:bg-white selection:text-black">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 py-24">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 pt-10 pb-24">
 
         {/* Back link */}
         <button
           onClick={handleBack}
-          className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary transition-colors mb-16 group"
+          className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary transition-colors mb-8 group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to home
         </button>
 
         {/* Header */}
-        <div className="border-b border-border-color pb-12 mb-16">
+        <div className="border-b border-border-color pb-8 mb-10">
           <p className="text-sm font-mono text-text-secondary uppercase tracking-widest mb-4">Publications</p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-text-primary">
             All Publications
@@ -113,6 +114,7 @@ export const PublicationsPage: React.FC = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

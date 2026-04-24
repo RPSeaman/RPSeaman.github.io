@@ -4,6 +4,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import { PublicationsPage } from './pages/PublicationsPage';
+import { SoftwareProjectsPage } from './pages/SoftwareProjectsPage';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -17,6 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/publications" element={<PublicationsPage />} />
+        <Route path="/projects" element={<SoftwareProjectsPage />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>
