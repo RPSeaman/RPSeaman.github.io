@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import { PublicationsPage } from './pages/PublicationsPage';
 import { SoftwareProjectsPage } from './pages/SoftwareProjectsPage';
+import { ThemeToggle } from './components/ThemeToggle';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -20,6 +21,7 @@ root.render(
         <Route path="/publications" element={<PublicationsPage />} />
         <Route path="/projects" element={<SoftwareProjectsPage />} />
       </Routes>
+      <ThemeToggle />
     </HashRouter>
   </React.StrictMode>
 );
