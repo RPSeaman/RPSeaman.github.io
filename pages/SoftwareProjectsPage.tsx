@@ -35,6 +35,10 @@ export const SoftwareProjectsPage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
+    document.title = "Projects | Ryan Seaman";
+    return () => {
+      document.title = "Ryan Seaman";
+    };
   }, []);
 
   const handleBack = () => {

@@ -50,6 +50,10 @@ export const PublicationsPage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
+    document.title = "Publications | Ryan Seaman";
+    return () => {
+      document.title = "Ryan Seaman";
+    };
   }, []);
 
   const handleBack = () => {
