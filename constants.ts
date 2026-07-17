@@ -31,6 +31,17 @@ export const SKILLS: Skill[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: '7',
+    title: 'A uniform tissue-clearing framework and mesoSPIM-ultra enable cm-scale single-neuron tracing',
+    description: 'Pende M, Cregg JM, Saghafi S, Broadbent S, Avdibasic A, Roeles J, Papadopoulos SC, __**Seaman RP**__, Pende N, Mateos MS, Jamwal K, Wunch M, Pasierbek P, Moreno-Cencerrado A, Korchynska S, Hauer R, Anderson P, Supper P, Kastriti ME, Reumann D, Moorhead M, Graber JH, Scholze P, Henschke JU, Budinger E, Knoblich JA, Klausberger T, Adameyko I, Harkany T, Kumar V, Joy MT, Kiehn O, Dodt HU, Voigt FF, Murawala P',
+    tags: ['Mouse', 'Tissue Clearing', 'mesoSPIM'],
+    link: 'https://pubmed.ncbi.nlm.nih.gov/42427676',
+    journal: 'bioRxiv',
+    citation: 'bioRxiv [Preprint]. 2026 Jul 3:2026.06.29.734841',
+    year: '2026',
+    featured: false
+  },
+  {
     id: '6',
     title: 'Injury-induced Cxcl11 and neutrophil signaling drive zebrafish kidney regeneration by generating a nephrogenic niche of Fgf and Wnt expression',
     description: 'Olajuyin O, Schenk H, Sampson WGB, Adekeye O, Kamei CN, Upadhyay RM, Kennedy R, Morrison E, Callahan R, Bonnet F, Graber J, __**Seaman R**__, Fuqua H, Wheeler R, Oxburgh L, Drummond IA',
