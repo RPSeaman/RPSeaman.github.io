@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
           <span className="text-text-secondary text-sm font-mono">Based in Boston</span>
         </motion.div>
 
-        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold tracking-tighter text-metallic leading-[1.1]">
+        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-r from-accent-teal via-accent-indigo to-accent-violet bg-clip-text text-transparent leading-[1.1]">
           {PORTFOLIO_OWNER}
         </motion.h1>
 

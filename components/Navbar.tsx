@@ -18,12 +18,17 @@ export const Navbar: React.FC = () => {
   ];
 
   const sectionIds = ['hero', 'about', 'experience', 'education', 'publications', 'projects'];
+  const isScrolling = useRef(false);
+  const scrollTimeout = useRef<number | null>(null);
 
   useEffect(() => {
     if (location.pathname !== '/') return;
 
     const observer = new IntersectionObserver(
       (entries) => {
+        // Ignore scroll triggers when scrolling programmatically from menu clicks
+        if (isScrolling.current) return;
+
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
@@ -39,11 +44,25 @@ export const Navbar: React.FC = () => {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+    };
   }, [location.pathname]);
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
+    
+    // Instantly set active section state for instant user feedback
+    setActiveSection(id);
+    
+    // Lock the IntersectionObserver during scroll animation
+    isScrolling.current = true;
+    if (scrollTimeout.current) window.clearTimeout(scrollTimeout.current);
+    scrollTimeout.current = window.setTimeout(() => {
+      isScrolling.current = false;
+    }, 850); // Easing animation transition buffer
+
     if (location.pathname !== '/') {
       navigate('/', { state: { scrollTo: id } });
     } else {
@@ -53,6 +72,14 @@ export const Navbar: React.FC = () => {
 
   const scrollToTop = () => {
     setIsOpen(false);
+    setActiveSection('hero');
+    
+    isScrolling.current = true;
+    if (scrollTimeout.current) window.clearTimeout(scrollTimeout.current);
+    scrollTimeout.current = window.setTimeout(() => {
+      isScrolling.current = false;
+    }, 850);
+
     if (location.pathname !== '/') {
       navigate('/');
     } else {

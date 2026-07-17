@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { SKILLS } from '../constants';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -43,6 +43,10 @@ const categoryColors: Record<string, {
 export const Skills: React.FC = () => {
   const categories = Array.from(new Set(SKILLS.map(s => s.category)));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  
+  const [showTopFade, setShowTopFade] = useState(false);
+  const [showBottomFade, setShowBottomFade] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const getTagStyle = (category: string) => {
     const config = categoryColors[category] || categoryColors['Modalities'];
@@ -52,6 +56,48 @@ export const Skills: React.FC = () => {
   const filteredSkills = selectedCategory === 'All' 
     ? SKILLS 
     : SKILLS.filter(s => s.category === selectedCategory);
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const isAtTop = el.scrollTop <= 2;
+    const isAtBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 2;
+
+    setShowTopFade(!isAtTop);
+    setShowBottomFade(!isAtBottom);
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    handleScroll();
+
+    el.addEventListener('scroll', handleScroll);
+
+    // Watch height changes when filtering items
+    const resizeObserver = new ResizeObserver(() => {
+      handleScroll();
+    });
+    resizeObserver.observe(el);
+
+    // Check after exit/entrance transitions complete
+    const timer = setTimeout(handleScroll, 150);
+
+    return () => {
+      el.removeEventListener('scroll', handleScroll);
+      resizeObserver.disconnect();
+      clearTimeout(timer);
+    };
+  }, [selectedCategory, filteredSkills.length]);
+
+  const getScrollFadeClass = () => {
+    if (showTopFade && showBottomFade) return 'scroll-fade-both';
+    if (showTopFade) return 'scroll-fade-top';
+    if (showBottomFade) return 'scroll-fade-bottom';
+    return '';
+  };
 
   const containerVariants = {
     hidden: { opacity: 1 },
@@ -120,7 +166,11 @@ export const Skills: React.FC = () => {
       </div>
       
       {/* Scrollable grid container for Skills */}
-      <div className="h-[250px] overflow-y-auto no-scrollbar pr-1 pt-1">
+      <div 
+        ref={scrollRef}
+        onScroll={handleScroll}
+        className={`h-[250px] overflow-y-auto no-scrollbar pr-1 pt-1 ${getScrollFadeClass()}`}
+      >
         <motion.div 
           variants={containerVariants}
           initial="hidden"

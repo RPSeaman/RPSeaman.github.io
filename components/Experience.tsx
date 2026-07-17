@@ -7,7 +7,7 @@ const getOrgLogo = (organization: string) => {
       <img 
         src="/images/MDIBL.png" 
         alt="MDI Biological Laboratory" 
-        className="w-12 h-12 object-contain opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-500"
+        className="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
       />
     );
   } else if (organization.includes('Harvard Medical School')) {
@@ -15,7 +15,7 @@ const getOrgLogo = (organization: string) => {
       <img
         src="/images/HIDIVE.png"
         alt="HIDIVE Lab"
-        className="w-12 h-12 object-contain opacity-80 hover:opacity-100 invert grayscale hover:grayscale-0 transition-all duration-500"
+        className="w-12 h-12 object-contain opacity-90 hover:opacity-100 logo-hidive"
       />
     );
   }

@@ -194,6 +194,12 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     period: 'December 2025 – Present'
   },
   {
+    position: 'Summer Research Intern',
+    organization: 'Harvard Medical School, Dr. Nils Gehlenborg',
+    location: 'Boston, MA',
+    period: 'May 2026 – August 2026'
+  },
+  {
     position: 'Bioinformatician, Comparative Genomic and Data Science Core',
     organization: 'MDI Biological Laboratory',
     location: 'Bar Harbor, ME',

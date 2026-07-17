@@ -8,7 +8,7 @@ import { AnimatedSection } from '../App';
 
 const getTagStyle = (tag: string) => {
   const lowercase = tag.toLowerCase();
-  
+
   // Organism / Biology keywords -> Indigo
   const organismKeywords = ['zebrafish', 'killifish', 'nothobranchius', 'furzeri', 'axolotl', 'mouse', 'human'];
   // Medical / Disease Focus keywords -> Emerald
@@ -76,12 +76,12 @@ export const SoftwareProjectsPage: React.FC = () => {
     return [...SOFTWARE_PROJECTS]
       .sort((a, b) => parseInt(b.year ?? '0') - parseInt(a.year ?? '0'))
       .filter(project => {
-        const matchesSearch = 
+        const matchesSearch =
           project.title.toLowerCase().includes(filteredQuery.toLowerCase()) ||
           project.description.toLowerCase().includes(filteredQuery.toLowerCase());
-        
+
         const matchesTag = !filteredTag || project.tags.includes(filteredTag);
-        
+
         return matchesSearch && matchesTag;
       });
   }, [filteredQuery, filteredTag]);
@@ -90,7 +90,7 @@ export const SoftwareProjectsPage: React.FC = () => {
     <div className="min-h-screen bg-bg-primary selection:bg-accent-teal/30 selection:text-white relative bg-dot-grid">
       {/* React 19 Document Metadata Hoisting */}
       <title>Projects | Ryan Seaman</title>
-      <meta name="description" content="Software development and bioinformatics tool suite created by Ryan Seaman." />
+      <meta name="description" content="A collection of projects and tools developed by Ryan Seaman." />
 
       {/* Background ambient elements wrapper for theme-level opacity/contrast dimming */}
       <div className="spheres-wrapper">
@@ -156,11 +156,10 @@ export const SoftwareProjectsPage: React.FC = () => {
               <span className="text-xs font-mono text-text-secondary/50 mr-1">Filter by tag:</span>
               <button
                 onClick={() => handleTagClick(null)}
-                className={`text-xs font-mono px-3 py-1.5 rounded-full border transition-all duration-300 cursor-pointer ${
-                  !selectedTag 
-                    ? 'bg-accent-teal/10 border-accent-teal/30 text-accent-teal' 
+                className={`text-xs font-mono px-3 py-1.5 rounded-full border transition-all duration-300 cursor-pointer ${!selectedTag
+                    ? 'bg-accent-teal/10 border-accent-teal/30 text-accent-teal'
                     : 'bg-white/[0.01] border-white/10 text-text-secondary hover:border-white/20 hover:text-text-primary'
-                }`}
+                  }`}
               >
                 All
               </button>
@@ -168,11 +167,10 @@ export const SoftwareProjectsPage: React.FC = () => {
                 <button
                   key={tag}
                   onClick={() => handleTagClick(tag)}
-                  className={`text-xs font-mono px-3 py-1.5 rounded-full border transition-all duration-300 cursor-pointer ${
-                    selectedTag === tag 
-                      ? 'bg-accent-teal/10 border-accent-teal/30 text-accent-teal' 
+                  className={`text-xs font-mono px-3 py-1.5 rounded-full border transition-all duration-300 cursor-pointer ${selectedTag === tag
+                      ? 'bg-accent-teal/10 border-accent-teal/30 text-accent-teal'
                       : 'bg-white/[0.01] border-white/10 text-text-secondary hover:border-white/20 hover:text-text-primary'
-                  }`}
+                    }`}
                 >
                   {tag}
                 </button>
@@ -239,7 +237,7 @@ export const SoftwareProjectsPage: React.FC = () => {
                         )}
                         {project.status && (
                           <span className={`text-xs font-mono ml-auto ${project.status === 'active' ? 'text-accent-teal/80 font-medium' :
-                              project.status === 'completed' ? 'text-text-secondary/70' : 'text-text-secondary/50'
+                            project.status === 'completed' ? 'text-text-secondary/70' : 'text-text-secondary/50'
                             }`}>
                             ● {statusLabel[project.status]}
                           </span>
@@ -250,11 +248,11 @@ export const SoftwareProjectsPage: React.FC = () => {
                     {/* Image */}
                     <div className="md:col-span-5">
                       {project.imageUrl ? (
-                        <div className={`aspect-video w-full overflow-hidden border border-white/10 rounded-md grayscale-[60%] group-hover:grayscale-0 transition-all duration-500 ${project.imageBg ?? ''}`}>
+                        <div className={`aspect-video w-full overflow-hidden border border-white/10 rounded-md ${project.imageBg ?? ''}`}>
                           <img
                             src={project.imageUrl}
                             alt={project.title}
-                            className="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                            className="w-full h-full object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300"
                           />
                         </div>
                       ) : (

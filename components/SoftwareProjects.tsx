@@ -11,7 +11,7 @@ const statusLabel: Record<string, string> = {
 
 const getTagStyle = (tag: string) => {
   const lowercase = tag.toLowerCase();
-  
+
   // Organism / Biology keywords -> Indigo
   const organismKeywords = ['zebrafish', 'killifish', 'nothobranchius', 'furzeri', 'axolotl', 'mouse', 'human'];
   // Medical / Disease Focus keywords -> Emerald
@@ -34,8 +34,8 @@ export const SoftwareProjects: React.FC = () => {
     <div className="space-y-8">
       <div className="flex items-end justify-between border-b border-border-color pb-4">
         <div>
-          <p className="text-xs font-mono text-accent-teal uppercase tracking-widest mb-2">Code</p>
-          <h2 className="text-3xl font-light text-metallic leading-tight">Software Projects</h2>
+          <p className="text-xs font-mono text-accent-teal uppercase tracking-widest mb-2">Work</p>
+          <h2 className="text-3xl font-light text-metallic leading-tight">Projects</h2>
         </div>
         <Link
           to="/projects"
@@ -89,10 +89,9 @@ export const SoftwareProjects: React.FC = () => {
                 ))}
               </div>
               {project.status && (
-                <span className={`text-xs font-mono ${
-                  project.status === 'active' ? 'text-accent-teal/80 font-medium' :
-                  project.status === 'completed' ? 'text-text-secondary/70' : 'text-text-secondary/50'
-                }`}>
+                <span className={`text-xs font-mono ${project.status === 'active' ? 'text-accent-teal/80 font-medium' :
+                    project.status === 'completed' ? 'text-text-secondary/70' : 'text-text-secondary/50'
+                  }`}>
                   ● {statusLabel[project.status]}
                 </span>
               )}

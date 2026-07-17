@@ -89,11 +89,11 @@ export const Projects: React.FC = () => {
                 </div>
              </div>
              <div className="md:col-span-7">
-                <div className="aspect-video w-full overflow-hidden bg-[#111] border border-white/[0.05] rounded-md grayscale-[60%] group-hover:grayscale-0 transition-all duration-500">
+                <div className="aspect-video w-full overflow-hidden bg-[#111] border border-white/[0.05] rounded-md">
                   <img 
                     src={project.imageUrl} 
                     alt={project.title} 
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
              </div>
