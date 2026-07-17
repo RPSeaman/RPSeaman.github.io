@@ -13,7 +13,7 @@ const getSchoolLogo = (school: string) => {
   } else if (school.includes('Colby')) {
     return (
       <img 
-        src="/images/Colby.png" 
+        src="/images/CC.png" 
         alt="Colby College" 
         className="w-12 h-12 object-contain opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-500"
       />
