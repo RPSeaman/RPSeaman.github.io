@@ -57,6 +57,7 @@ export const Projects: React.FC = () => {
         </div>
         <Link
           to="/publications"
+          viewTransition
           className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-accent-teal transition-colors group pb-1 cursor-pointer"
         >
           View all

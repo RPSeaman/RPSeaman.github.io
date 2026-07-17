@@ -3,26 +3,38 @@
 <div align="center">
 
 ![Banner](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite)
 
 ### 🌐 [Visit Website](https://rpseaman.com)
 
-A modern, responsive portfolio website showcasing biomedical informatics expertise and projects.
+A modern, high-performance portfolio website showcasing biomedical informatics expertise and projects.
 
 </div>
 
 ---
 
+## Key Features & Highlights
+
+- **React 19 Integration:**
+  - **Native Document Metadata Hoisting:** Dynamic page title and description tags declared within component JSX, eliminating imperative side-effects.
+  - **Fluid Search Transitions:** Implemented React 19 `useTransition` to run list searches and category tag filtering in the background, keeping text input typing perfectly responsive.
+  - **Resource Preloading:** Hoisted preloading `<link>` tags inline to fetch heavy assets (LCP profile photo and featured publication graphics) early.
+- **Native Browser View Transitions:** Seamless CSS-driven morph transitions when routing between pages.
+- **Premium Glassmorphism Design:** Dark, modern theme styled with custom gradients, floating ambient spheres, interactive 3D card tilt springs, and robust, high-legibility fallbacks optimized for Firefox.
+
+---
+
 ## Tech Stack
 
-- **React 18** - UI library
+- **React 19** - UI library
 - **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Vite** - Build tool
-- **Lucide React** - Icons
+- **Tailwind CSS v4** - Styling framework
+- **Vite** - Build tool and dev server
+- **Framer Motion** - 3D spring animations and gestures
+- **Lucide React** - Icon library
 
 ---
 
@@ -58,7 +70,7 @@ A modern, responsive portfolio website showcasing biomedical informatics experti
 
 ## Deployment
 
-This site is deployed on **GitHub Pages** and accessible at [rpseaman.com](https://rpseaman.com)
+This site is deployed on **GitHub Pages** and accessible at [rpseaman.com](https://rpseaman.com). Deployment is automated via GitHub Actions workflows.
 
 ---
 

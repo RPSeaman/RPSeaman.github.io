@@ -98,7 +98,7 @@ export const Hero: React.FC = () => {
           <img
             src="/images/profile.jpeg"
             alt="Profile picture"
-            className="w-full h-full object-cover rounded-2xl border border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05),0_10px_30px_rgba(0,0,0,0.5)] relative z-10 transition-all duration-500 group-hover/avatar:scale-[1.02] group-hover/avatar:border-accent-teal/30"
+            className="w-full h-full object-cover rounded-2xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05),0_10px_30px_rgba(0,0,0,0.5)] relative z-10 transition-all duration-500 group-hover/avatar:scale-[1.02]"
           />
         </div>
       </motion.div>

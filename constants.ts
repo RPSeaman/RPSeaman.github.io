@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
     id: '5',
     title: 'Sexually Dimorphic Response to Dietary Restriction-induced Longevity and Muscle Rejuvenation in Nothobranchius furzeri',
     description: 'Sandhi S, Somers H, Cox M, Nobrega C, __**Seaman R**__, Bakers E, Letchner O, Reeve R, Menard R, Godwin J, Paulmann A, Rogers A, Valenzano DR, Graber J, Haller H, Madelaine R',
-    tags: ['Nothobranchius furzeri', 'Dietary Restriction', 'Aging'],
+    tags: ['African Turquoise Killifish', 'Dietary Restriction', 'Aging'],
     link: 'https://pubmed.ncbi.nlm.nih.gov/41727172',
     journal: 'bioRxiv',
     citation: 'bioRxiv [Preprint]. 2026 Feb 11:2026.02.09.704879',

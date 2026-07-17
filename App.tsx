@@ -91,6 +91,14 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-bg-primary selection:bg-accent-teal/30 selection:text-white relative bg-dot-grid">
+      {/* React 19 Document Metadata & Preloads - automatically hoisted to <head> */}
+      <title>Ryan Seaman | Biomedical Informatics</title>
+      <meta name="description" content="Computational biologist and data scientist pursuing an MMSc in Biomedical Informatics at Harvard Medical School." />
+      <link rel="preload" href="./images/profile.jpeg" as="image" />
+      <link rel="preload" href="./images/ATK.jpg" as="image" />
+      <link rel="preload" href="./images/AXO.jpeg" as="image" />
+      <link rel="preload" href="./images/SEQ.jpg" as="image" />
+
       {/* Background ambient elements wrapper for theme-level opacity/contrast dimming */}
       <div className="spheres-wrapper">
         {/* Ambient background glows */}
