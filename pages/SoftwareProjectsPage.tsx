@@ -87,24 +87,18 @@ export const SoftwareProjectsPage: React.FC = () => {
   }, [filteredQuery, filteredTag]);
 
   return (
-    <div className="min-h-screen bg-bg-primary selection:bg-accent-teal/30 selection:text-white relative bg-dot-grid">
+    <div className="min-h-screen bg-bg-primary selection:bg-accent-teal/30 selection:text-white relative overflow-x-hidden">
       {/* React 19 Document Metadata Hoisting */}
       <title>Projects | Ryan Seaman</title>
       <meta name="description" content="A collection of projects and tools developed by Ryan Seaman." />
 
       {/* Background ambient elements wrapper for theme-level opacity/contrast dimming */}
       <div className="spheres-wrapper">
-        {/* Ambient background glows */}
-        <div className="fixed top-0 left-0 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.15),transparent_70%)] pointer-events-none -translate-x-1/3 -translate-y-1/3 animate-float-1 z-0" />
-        <div className="fixed top-[35%] right-0 w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,rgba(20,184,166,0.1),transparent_70%)] pointer-events-none translate-x-1/3 animate-float-2 z-0" />
-        <div className="fixed bottom-0 left-[10%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.12),transparent_70%)] pointer-events-none -translate-x-1/2 translate-y-1/4 animate-float-1 z-0" />
-
-        {/* Extra Decorative background spheres for enhanced depth */}
-        <div className="fixed top-[12%] left-[10%] w-32 h-32 rounded-full bg-gradient-to-br from-cyan-400/35 to-teal-600/15 border border-cyan-400/30 shadow-[0_0_20px_rgba(34,211,238,0.12)] pointer-events-none animate-float-1 z-0" />
-        <div className="fixed top-[28%] right-[15%] w-24 h-24 rounded-full bg-gradient-to-br from-emerald-400/35 to-teal-500/15 border border-emerald-400/30 shadow-[0_0_15px_rgba(52,211,153,0.12)] pointer-events-none animate-float-2 z-0" />
-        <div className="fixed top-[48%] left-[22%] w-40 h-40 rounded-full bg-gradient-to-tr from-pink-500/35 to-purple-600/15 border border-pink-400/30 shadow-[0_0_25px_rgba(244,63,94,0.12)] pointer-events-none animate-float-2 z-0" />
-        <div className="fixed top-[65%] right-[25%] w-28 h-28 rounded-full bg-gradient-to-tr from-lime-400/30 to-emerald-500/10 border border-lime-400/25 shadow-[0_0_15px_rgba(163,230,53,0.08)] pointer-events-none animate-float-1 z-0" />
-        <div className="fixed top-[80%] left-[8%] w-36 h-36 rounded-full bg-gradient-to-br from-red-500/30 to-amber-500/10 border border-red-400/25 shadow-[0_0_20px_rgba(239,68,68,0.15)] pointer-events-none animate-float-2 z-0" />
+        {/* Soft, large volumetric background blur glows to back-light the glassmorphic panels */}
+        <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-accent-indigo/10 blur-[120px] pointer-events-none z-0" />
+        <div className="fixed top-[20%] right-[-10%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] rounded-full bg-accent-teal/8 blur-[130px] pointer-events-none z-0" />
+        <div className="fixed bottom-[15%] left-[-15%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] rounded-full bg-accent-violet/6 blur-[140px] pointer-events-none z-0" />
+        <div className="fixed bottom-[-10%] right-[10%] w-[45vw] h-[45vw] max-w-[550px] max-h-[550px] rounded-full bg-accent-teal/6 blur-[110px] pointer-events-none z-0" />
       </div>
 
       <div className="relative z-10">
@@ -182,7 +176,7 @@ export const SoftwareProjectsPage: React.FC = () => {
           <div className="space-y-8">
             {displayProjects.length > 0 ? (
               displayProjects.map((project) => (
-                <AnimatedSection key={project.id} className="rounded-2xl">
+                <AnimatedSection key={project.id} className="rounded-2xl glass-panel-hover">
                   <div className="grid md:grid-cols-12 gap-8 items-start text-left animate-fadeIn">
                     {/* Content */}
                     <div className="md:col-span-7 space-y-3">

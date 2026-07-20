@@ -3,9 +3,12 @@ import { Github, Linkedin, Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="w-full mt-16 footer-glass">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8 flex flex-col items-center gap-4">
-        <div className="flex gap-6">
+    <footer className="max-w-5xl mx-auto w-[calc(100%-2rem)] mt-16 mb-8 footer-glass rounded-2xl sm:rounded-full border border-border-color">
+      <div className="px-6 sm:px-8 py-4 sm:py-3 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-text-secondary text-sm font-light order-2 sm:order-1">
+          © {new Date().getFullYear()} Ryan Seaman.
+        </p>
+        <div className="flex gap-6 order-1 sm:order-2">
           <a 
             href="https://github.com/RPSeaman" 
             target="_blank" 
@@ -45,7 +48,6 @@ export const Footer: React.FC = () => {
             <Instagram className="w-5 h-5" />
           </a>
         </div>
-        <p className="text-text-secondary text-sm">© {new Date().getFullYear()} Ryan Seaman.</p>
       </div>
     </footer>
   );

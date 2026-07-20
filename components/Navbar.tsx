@@ -93,10 +93,10 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 navbar-glass">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8">
-        <div className="flex items-center justify-between h-16">
-          <button onClick={scrollToTop} className="font-bold text-lg tracking-tight text-text-primary cursor-pointer">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl z-50 navbar-glass rounded-full px-6 shadow-md">
+      <div className="w-full">
+        <div className="flex items-center justify-between h-12">
+          <button onClick={scrollToTop} className="font-bold text-sm sm:text-base tracking-tight text-text-primary cursor-pointer">
             Ryan Seaman
           </button>
 
@@ -113,14 +113,12 @@ export const Navbar: React.FC = () => {
               ))}
             </div>
 
-
-
             <button
               onClick={() => scrollToSection('contact')}
-              className={`hidden md:block text-sm font-medium transition-colors border px-4 py-2 rounded cursor-pointer ${
+              className={`hidden md:block text-sm font-medium px-4 py-1 rounded-full transition-all duration-300 border cursor-pointer ${
                 activeSection === 'contact'
-                  ? 'bg-text-primary text-bg-primary border-transparent'
-                  : 'text-text-primary border-border-color hover:bg-text-primary/10'
+                  ? 'bg-accent-teal/15 text-accent-teal border-accent-teal/25 shadow-sm shadow-accent-teal/10'
+                  : 'bg-white/[0.02] border-white/10 hover:border-white/20 text-text-secondary hover:text-text-primary hover:bg-white/[0.06]'
               }`}
             >
               Contact
@@ -129,20 +127,20 @@ export const Navbar: React.FC = () => {
             {/* Mobile hamburger button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-text-primary p-2 cursor-pointer"
+              className="md:hidden text-text-primary p-2 cursor-pointer flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu (floating tray detached below the navbar capsule) */}
       <div
         ref={menuRef}
-        className={`md:hidden border-t border-white/[0.06] bg-slate-950/80 backdrop-blur-lg overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 border-t-0'
+        className={`md:hidden absolute top-14 left-0 w-full border border-border-color bg-slate-950/85 backdrop-blur-lg rounded-2xl overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 opacity-100 shadow-xl' : 'max-h-0 opacity-0 border-transparent pointer-events-none'
         }`}
       >
         <div className="px-6 py-4 space-y-4">
@@ -155,12 +153,16 @@ export const Navbar: React.FC = () => {
               {link.name}
             </button>
           ))}
-             <button
-              onClick={() => scrollToSection('contact')}
-              className="w-full text-sm font-medium text-text-primary transition-colors border border-border-color px-4 py-2 rounded hover:bg-text-primary hover:text-bg-primary text-center cursor-pointer"
-            >
-              Contact
-            </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className={`w-full text-sm font-medium px-4 py-2 rounded-full transition-all duration-300 border text-center cursor-pointer ${
+              activeSection === 'contact'
+                ? 'bg-accent-teal/15 text-accent-teal border-accent-teal/25'
+                : 'bg-white/[0.02] border-white/10 text-text-secondary hover:text-text-primary hover:bg-white/[0.06]'
+            }`}
+          >
+            Contact
+          </button>
         </div>
       </div>
     </nav>
