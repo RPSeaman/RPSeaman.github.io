@@ -1,3 +1,4 @@
+import type { Variants } from 'framer-motion';
 import React, { useState, useEffect, useRef } from 'react';
 import { SKILLS } from '../constants';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -99,7 +100,7 @@ export const Skills: React.FC = () => {
     return '';
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
@@ -109,7 +110,7 @@ export const Skills: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 12, scale: 0.92 },
     visible: { 
       opacity: 1, 

@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
+const sectionIds = ['hero', 'about', 'experience', 'education', 'publications', 'projects'];
+
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -17,7 +19,6 @@ export const Navbar: React.FC = () => {
     { name: 'Projects', id: 'projects' },
   ];
 
-  const sectionIds = ['hero', 'about', 'experience', 'education', 'publications', 'projects'];
   const isScrolling = useRef(false);
   const scrollTimeout = useRef<number | null>(null);
 

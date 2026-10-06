@@ -1,3 +1,4 @@
+import type { Variants } from 'framer-motion';
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -5,7 +6,7 @@ import { PORTFOLIO_OWNER, OWNER_ROLE } from '../constants';
 
 export const Hero: React.FC = () => {
   // Stagger configurations for Hero component elements
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,7 +17,7 @@ export const Hero: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 25 },
     visible: { 
       opacity: 1, 
@@ -29,7 +30,7 @@ export const Hero: React.FC = () => {
     }
   };
 
-  const avatarVariants = {
+  const avatarVariants: Variants = {
     hidden: { opacity: 0, scale: 0.94, rotate: -1 },
     visible: { 
       opacity: 1, 

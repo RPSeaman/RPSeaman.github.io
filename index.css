@@ -114,40 +114,6 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-
-
-
-
-/* Ambient glow drift animations */
-@keyframes float-slow-1 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(40px, -60px) scale(1.15);
-  }
-  66% {
-    transform: translate(-30px, 30px) scale(0.9);
-  }
-}
-
-@keyframes float-slow-2 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1.1);
-  }
-  50% {
-    transform: translate(-60px, 60px) scale(0.95);
-  }
-}
-
-.animate-float-1 {
-  animation: float-slow-1 30s infinite ease-in-out;
-}
-
-.animate-float-2 {
-  animation: float-slow-2 25s infinite ease-in-out;
-}
-
 .glass-panel {
   background-image: 
     linear-gradient(var(--glass-bg), var(--glass-bg)), 
@@ -218,52 +184,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
-}
-
-/* Scroll animations */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(48px);
-    filter: blur(4px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animate-on-scroll {
-  opacity: 0;
-}
-
-.animate-on-scroll.is-visible {
-  animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* Hero staggered entrance */
-@keyframes hero-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-    filter: blur(4px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-.animate-hero-fade-in {
-  animation: hero-fade-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Smooth scrolling for anchor links & scroll margins */
