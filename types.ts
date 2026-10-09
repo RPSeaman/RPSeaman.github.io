@@ -12,12 +12,6 @@ export interface Project {
   featured?: boolean;
 }
 
-export interface Skill {
-  name: string;
-  category: 'Modalities' | 'Languages' | 'Tools' | 'Platforms';
-  level: number; // 0-100
-}
-
 export interface SocialLink {
   platform: string;
   url: string;
@@ -39,6 +33,8 @@ export interface WorkExperience {
 }
 
 export interface SoftwareProject {
+  detailPath?: string;
+  note?: string;
   id: string;
   title: string;
   description: string;

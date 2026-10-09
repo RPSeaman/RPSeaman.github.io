@@ -5,23 +5,9 @@ import './index.css';
 import App from './App';
 import { PublicationsPage } from './pages/PublicationsPage';
 import { SoftwareProjectsPage } from './pages/SoftwareProjectsPage';
-import { ThemeToggle } from './components/ThemeToggle';
-
+import { ProjectDetailPage } from './pages/ProjectDetailPage';
+import { NotFoundPage } from './pages/NotFoundPage';
+import { RouteScroll } from './components/RouteScroll';
 const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
-
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/publications" element={<PublicationsPage />} />
-        <Route path="/projects" element={<SoftwareProjectsPage />} />
-      </Routes>
-      <ThemeToggle />
-    </HashRouter>
-  </React.StrictMode>
-);
+if (!rootElement) throw new Error('Could not find root element to mount to');
+ReactDOM.createRoot(rootElement).render(<React.StrictMode><HashRouter><RouteScroll /><Routes><Route path="/" element={<App />} /><Route path="/publications" element={<PublicationsPage />} /><Route path="/projects" element={<SoftwareProjectsPage />} /><Route path="/projects/:slug" element={<ProjectDetailPage />} /><Route path="*" element={<NotFoundPage />} /></Routes></HashRouter></React.StrictMode>);

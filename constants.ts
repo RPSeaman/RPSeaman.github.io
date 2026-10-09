@@ -1,33 +1,11 @@
-import { Project, Skill, SocialLink, Education, WorkExperience, SoftwareProject } from './types';
+import { Project, SocialLink, Education, WorkExperience, SoftwareProject } from './types';
 
 export const PORTFOLIO_OWNER = "Ryan Seaman";
+export const RESUME_URL = './files/RyanSeamanResume-2026-10-08-r3.pdf';
 export const OWNER_ROLE = "Biomedical Informatics";
 
-export const BIO = `
-Computational biologist and data scientist pursuing an MMSc in Biomedical Informatics at Harvard Medical School. Experienced in bioinformatics pipelines, cloud infrastructure, machine learning, and single-cell genomics, with current thesis work applying multi-agent LLM systems to automated data visualization.
-`;
+export const BIO = `I’m Ryan, a biomedical informatics researcher interested in turning scientific questions into useful health technology. I enjoy working through ideas with other people.`;
 
-export const SKILLS: Skill[] = [
-  { name: 'RNAseq', category: 'Modalities', level: 95 },
-  { name: 'sc/snRNAseq', category: 'Modalities', level: 90 },
-  { name: '10x Visium', category: 'Modalities', level: 95 },
-  { name: '10x Xenium', category: 'Modalities', level: 95 },
-  { name: '10x Multiome', category: 'Modalities', level: 95 },
-  { name: 'Python', category: 'Languages', level: 85 },
-  { name: 'R', category: 'Languages', level: 80 },
-  { name: 'Java', category: 'Languages', level: 80 },
-  { name: 'Groovy', category: 'Languages', level: 80 },
-  { name: 'Bash', category: 'Languages', level: 80 },
-  { name: 'Nextflow', category: 'Tools', level: 75 },
-  { name: 'nf-core', category: 'Tools', level: 85 },
-  { name: 'command line', category: 'Tools', level: 85 },
-  { name: 'genomics analysis tools', category: 'Tools', level: 85 },
-  { name: 'git/GitHub', category: 'Tools', level: 85 },
-  { name: 'Google Cloud Platform', category: 'Platforms', level: 80 },
-  { name: 'Amazon Web Services', category: 'Platforms', level: 80 },
-  { name: 'Slurm', category: 'Platforms', level: 80 },
-
-];
 
 export const PROJECTS: Project[] = [
   {
@@ -103,9 +81,21 @@ export const PROJECTS: Project[] = [
 
 export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
+    id: 'annotations',
+    title: 'Vitessce Annotations',
+    description: 'An annotation and narrative system that connects scientific explanations to interactive spatial and single-cell data. I built the full annotation system within the existing Vitessce framework, with supervision and guidance from Mark S. Keller and Nils Gehlenborg.',
+    tags: ['Narrative Visualization', 'Vitessce', 'Spatial Data'],
+    year: '2026',
+    featured: true,
+    detailPath: '/projects/vitessce-annotations',
+    note: 'Manuscript in preparation',
+  },
+  {
     id: 'sp4',
+    detailPath: '/projects/vitesscegen',
+    note: 'MMSc thesis · In progress',
     title: 'VitessceGen',
-    description: 'MMSc thesis project at the HIDIVE Lab, Harvard Medical School. VitessceGen uses a multi-agent LLM pipeline to automatically generate Vitessce visualization configurations from biomedical datasets. Coordinated agents analyze dataset structure, select appropriate visualization components, and produce ready-to-render Vitessce schemas for spatial and single-cell genomic data, removing the need for manual configuration.',
+    description: 'MMSc thesis project at the HIDIVE Lab, Harvard Medical School. VitessceGen uses a multi-agent LLM pipeline to automatically generate Vitessce visualization configurations from biomedical datasets. The research explores how coordinated agents can analyze dataset structure, select visualization components, and produce configurations for spatial and single-cell data.',
     tags: ['LLM', 'Multi-Agent', 'Vitessce', 'Data Visualization', 'Python'],
     imageUrl: './images/VitessceGen.png',
     imageBg: 'bg-white',
@@ -116,7 +106,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp1',
     title: 'AperioVis',
-    description: 'Interactive visualization platform for processed scRNA-seq datasets. Enables wet-lab researchers to interrogate high-dimensional genomic data directly, no programming required. Ingests QC-normalized, dimensionality-reduced datasets and exposes them through an intuitive interface, removing the bioinformatician bottleneck from every visualization request.',
+    description: 'An interactive Shiny for Python application for exploring processed single-cell RNA sequencing datasets. It brings quality-controlled, normalized data and dimensionality-reduction views into a browser interface for researchers.',
     tags: ['Shiny for Python', 'scRNAseq', 'Data Visualization'],
     imageUrl: './images/AperioVis.png',
     imageBg: 'bg-white',
@@ -140,7 +130,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp5',
     title: 'Cadence Health',
-    description: 'A digital health venture focused on making continuous, personalized health monitoring accessible. Cadence Health transforms raw biosignal data into meaningful health insights, empowering individuals to understand and act on their health in real time.',
+    description: 'A digital health concept exploring how continuous biosignal data could become more useful, understandable health information. An early prototype connects my interests in health technology and interpreting complex data.',
     tags: ['Digital Health', 'Health Tech', 'Startup'],
     imageUrl: './images/CadenceHealth.png',
     imageBg: 'bg-white',
@@ -153,8 +143,8 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp3',
     title: 'Personal Website',
-    description: 'This site, built with React, TypeScript, Vite, and Tailwind CSS. Features scroll animations, client-side routing, dedicated pages for publications and projects, and continuous deployment via GitHub Actions to GitHub Pages.',
-    tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+    description: 'A personal site built around a warm visual identity, accessible typography, and stories about research. Built with React, TypeScript, and Vite, with continuous deployment through GitHub Actions to GitHub Pages.',
+    tags: ['React', 'TypeScript', 'Vite'],
     imageUrl: './images/Website.png',
     github: 'https://github.com/RPSeaman/RPSeaman.github.io',
     year: '2026',

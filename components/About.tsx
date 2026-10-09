@@ -1,18 +1,3 @@
-import React from 'react';
-import { BIO } from '../constants';
-
-export const About: React.FC = () => {
-  return (
-    <div className="space-y-6">
-      <div>
-        <p className="text-xs font-mono text-accent-teal uppercase tracking-widest mb-2">About</p>
-        <h2 className="text-3xl font-light text-metallic leading-tight">Bio</h2>
-      </div>
-      <div className="prose prose-invert prose-lg text-text-primary leading-relaxed">
-        {BIO.split('\n').map((paragraph, idx) => (
-          paragraph.trim() && <p key={idx} className="text-lg md:text-xl font-light text-text-secondary mb-4">{paragraph}</p>
-        ))}
-      </div>
-    </div>
-  );
-};
+export function About() {
+  return <section className="about section" id="about" aria-labelledby="about-title"><div><p className="meta">02 / About</p><h2 id="about-title">How I work</h2></div><div className="about-copy"><p>I enjoy getting in a room with a few coworkers and drawing out an idea. We sketch a plan, write over it, spot what’s missing, and work through it again.</p><p>That’s the kind of collaboration I’m looking for in health technology and biotech: understanding the science, sharing perspectives, and figuring out what to do next.</p><p className="muted">My background is in computational biology and biomedical informatics. I’m interested in research and project work that brings people and ideas together to make health technology useful.</p></div></section>;
+}

@@ -1,16 +1,10 @@
-import type { ReactNode } from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { PublicationsPage } from '../pages/PublicationsPage';
 import { SoftwareProjectsPage } from '../pages/SoftwareProjectsPage';
 import { PROJECTS, SOFTWARE_PROJECTS } from '../constants';
-
-// These tests exercise real page controls and data, independent of viewport animations.
-vi.mock('../components/AnimatedSection', () => ({
-  AnimatedSection: ({ children }: { children: ReactNode }) => <section>{children}</section>,
-}));
 
 const cases = [
   {
@@ -28,7 +22,7 @@ const cases = [
     Page: SoftwareProjectsPage,
     items: SOFTWARE_PROJECTS,
     query: 'AperioVis',
-    tag: 'Vitessce',
+    tag: 'Multi-Agent',
     matchingTitle: 'VitessceGen',
   },
 ];
@@ -46,6 +40,12 @@ describe.each(cases)('$name', ({ path, Page, items, query, tag, matchingTitle })
     }
   }
 
+  it('matches topics in search and restores URL filters on entry', async () => {
+    render(<MemoryRouter initialEntries={[`${path}?q=${encodeURIComponent(tag)}`]}><Page /></MemoryRouter>);
+    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(1);
+    expect(screen.getByRole('heading', { name: matchingTitle })).toBeTruthy();
+  });
+
   it('restores every result after resetting an unmatched search', async () => {
     const user = setup();
     const input = screen.getByRole('textbox');
@@ -60,7 +60,8 @@ describe.each(cases)('$name', ({ path, Page, items, query, tag, matchingTitle })
   it('clears the search and selected tag together, then accepts a new search', async () => {
     const user = setup();
     const input = screen.getByRole('textbox');
-    await user.click(screen.getAllByRole('button', { name: tag })[0]);
+    await user.click(screen.getByRole('button', { name: /Filter by topic/ }));
+    await user.click(within(screen.getByRole('group', { name: 'Topics' })).getByRole('button', { name: tag }));
     expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(1);
     expect(screen.getByRole('heading', { name: matchingTitle })).toBeTruthy();
     await user.type(input, 'no-match-xyz');
@@ -76,7 +77,7 @@ describe.each(cases)('$name', ({ path, Page, items, query, tag, matchingTitle })
 
   it('supports filtering from a result card and returning to all tags', async () => {
     const user = setup();
-    const card = screen.getByRole('heading', { name: matchingTitle }).closest('section')!;
+    const card = screen.getByRole('heading', { name: matchingTitle }).closest('article')!;
     await user.click(within(card).getByRole('button', { name: tag }));
     expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(1);
     await user.click(screen.getByRole('button', { name: 'All' }));

@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-08",
+  "name": "Ryan P. Seaman",
+  "email": "ryan.patrick.seaman@gmail.com",
+  "phone": "(503) 781-7821",
+  "website": "rpseaman.com",
+  "location": "Boston, MA",
+  "summary": "Biomedical informatics researcher and MMSc candidate at Harvard Medical School, seeking collaborative research and project roles in health technology and biotech.",
+  "experience": [
+    {
+      "role": "Graduate Research Assistant, HIDIVE Lab",
+      "dates": "Dec 2025 - Present",
+      "organization": "Harvard Medical School",
+      "location": "Boston, MA",
+      "bullets": [
+        "Developing VitessceGen, a multi-agent AI tool that generates interactive visualization configurations from spatial and single-cell biomedical data.",
+        "Evaluating generated configurations against expert-authored examples using HuBMAP datasets, under Nils Gehlenborg's supervision."
+      ]
+    },
+    {
+      "role": "Summer Research Intern, HIDIVE Lab",
+      "dates": "May 2026 - Aug 2026",
+      "organization": "Harvard Medical School",
+      "location": "Boston, MA",
+      "bullets": [
+        "Created the full annotation and narrative system within the existing Vitessce framework, with supervision and guidance from Mark S. Keller and Nils Gehlenborg.",
+        "Connected narrative text, saved views, and visual annotations into guided stories for spatial and single-cell data; manuscript in preparation."
+      ]
+    },
+    {
+      "role": "Bioinformatician",
+      "dates": "Jan 2023 - Aug 2025",
+      "organization": "MDI Biological Laboratory, Comparative Genomic and Data Science Core",
+      "location": "Bar Harbor, ME",
+      "bullets": [
+        "Collaborated with research labs on biomedical data analysis and developed tools that help researchers explore their own datasets.",
+        "Built scscape, an open-source Nextflow pipeline for reproducible, multi-sample single-cell RNA sequencing analysis.",
+        "Maintained GCP/AWS infrastructure for research analysis and data storage."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Harvard Medical School",
+      "dates": "Expected May 2027",
+      "degree": "MMSc, Biomedical Informatics",
+      "detail": "Boston, MA"
+    },
+    {
+      "school": "Colby College",
+      "dates": "Jan 2023",
+      "degree": "BA, Computational Biology",
+      "detail": "Waterville, ME | Varsity soccer, four years"
+    }
+  ],
+  "skills": [
+    {
+      "label": "",
+      "text": "Python, R; biomedical data analysis and visualization; single-cell and spatial genomics."
+    }
+  ],
+  "publications": [
+    {
+      "authors": "Seaman RP, et al.",
+      "year": "2024",
+      "title": "A cloud-based training module for efficient de novo transcriptome assembly using Nextflow and Google Cloud.",
+      "journal": "Briefings in Bioinformatics",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38941113/"
+    }
+  ],
+  "version": "2026-10-08-r2",
+  "collaboration": [
+    {
+      "organization": "MDI Biological Laboratory",
+      "dates": "2023 - 2025",
+      "bullets": [
+        "Co-taught a three-day single-cell course in 2024; created teaching materials and the course website.",
+        "Taught Python, held office hours, and mentored summer interns on computational research projects."
+      ]
+    },
+    {
+      "organization": "Colby College, Admissions Assistant Coordinator",
+      "dates": "Summer 2021",
+      "bullets": [
+        "Coordinated the summer cohort's campus tours for prospective students and families."
+      ]
+    }
+  ]
+}

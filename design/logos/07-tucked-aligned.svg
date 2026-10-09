@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Ryan Seaman — tucked rs with matching upper curves</title>
+  <!-- The two upper cubic curves are identical, translated vertically by 20 units.
+       The s traverses the same curve in reverse. Both tips end at x=80. -->
+  <path d="M24 82V24M24 44C24 32 34 26 45 23C57 20 69 23 80 30" stroke="currentColor" stroke-width="10"/>
+  <path d="M80 50C69 43 57 40 45 43C32 46 43 60 58 63C82 68 81 83 61 83C52 83 45 81 40 77" stroke="currentColor" stroke-width="10"/>
+</svg>

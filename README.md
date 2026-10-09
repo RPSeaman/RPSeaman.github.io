@@ -1,102 +1,44 @@
-# Ryan Seaman Personal Website
+# Ryan Seaman’s personal website
 
-<div align="center">
+A portfolio for collaborative research, biomedical informatics, and health technology. Built with React, TypeScript, Vite, and Tailwind’s base styles; deployed to GitHub Pages.
 
-![Banner](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss)
-![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite)
+## Local development
 
-### 🌐 [Visit Website](https://rpseaman.com)
+Use Node 22 (see `.nvmrc`).
 
-A modern, high-performance portfolio website showcasing biomedical informatics expertise and projects.
+```sh
+npm ci
+npm run dev
+```
 
-</div>
+`npm run check` runs lint, TypeScript checks, regression tests, and the production build. `npm run preview` serves the built `dist` directory locally.
 
----
+## Pages and content
 
-## Key Features & Highlights
+- `/`: introduction, selected work, working style, background, publications, and contact.
+- `/#/projects`: project collection with search and optional topic filters.
+- `/#/projects/vitessce-annotations`: the annotation project story and contribution.
+- `/#/projects/vitesscegen`: overview of ongoing thesis research.
+- `/#/publications`: publication archive, including author lists, citations, and preprint labels.
 
-- **React 19 Integration:**
-  - **Native Document Metadata Hoisting:** Dynamic page title and description tags declared within component JSX, eliminating imperative side-effects.
-  - **Fluid Search Transitions:** Implemented React 19 `useTransition` to run list searches and category tag filtering in the background, keeping text input typing perfectly responsive.
-  - **Resource Preloading:** Hoisted preloading `<link>` tags inline to fetch heavy assets (LCP profile photo and featured publication graphics) early.
-- **Client-side routing:** Hash-based home, publications, and projects routes compatible with GitHub Pages.
-- **Premium Glassmorphism Design:** Dark, modern theme styled with custom gradients, ambient background glows, interactive 3D card tilt springs, and robust, high-legibility fallbacks optimized for Firefox.
+Hash routing lets direct links and page reloads work on GitHub Pages without a server. Search and topic filters are stored in each archive’s URL. The primary Work, About, and Publications links consistently lead to homepage sections. “All projects” and “All publications” open their respective collections. Section links use an inner hash, for example `/#/#about`.
 
----
+Project/publication records, education, and experience live in `constants.ts`. Project stories live in `pages/ProjectDetailPage.tsx`. Shared search and filtering live in `components/Archive.tsx`. The page header and footer are shared across routes.
 
-## Tech Stack
+Existing publication citations and external links have been retained. Vitessce Annotations is a manuscript in preparation; Ryan built the annotation system within the existing Vitessce framework, with supervision and guidance from Mark S. Keller and Nils Gehlenborg. VitessceGen is ongoing thesis research. New illustrations are conceptual, not research data or product screenshots.
 
-- **React 19** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS v4** - Styling framework
-- **Vite** - Build tool and dev server
-- **Framer Motion** - 3D spring animations and gestures
-- **Lucide React** - Icon library
+## Visual identity
 
----
+Production styles and design tokens live in `index.css`. The site uses warm paper, terracotta, and forest green; a single light appearance; and the original Open 03 monogram.
 
-## Run Locally
+Instrument Sans is bundled locally, with `ss01`, `ss02`, and `ss03` enabled for headings and the wordmark. Body text uses the default letterforms; the alternate ampersand is disabled throughout. The font source and license are in `assets/fonts/`, and the distributed license is in `public/fonts/`. IBM Plex Mono is loaded from Google Fonts for labels, with a monospace fallback.
 
-### Prerequisites
-- Node.js 22.13+ recommended (`.nvmrc` and CI use Node 22; see `package.json` for supported versions)
+`components/ProjectArtwork.tsx` contains text-free, responsive SVG illustrations for all six projects. Source research images and earlier project logos remain in `public/images/`.
 
-### Steps
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/RPSeaman/RPSeaman.github.io.git
-   cd RPSeaman.github.io
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm ci
-   ```
-
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
----
-
-## Maintenance
-
-- `npm run lint` — ESLint checks for TypeScript and React Hooks.
-- `npm run typecheck` — strict TypeScript checking without emitting files.
-- `npm test` — regression tests for search, tag filtering, and resetting filters on both listing pages.
-- `npm run test:watch` — rerun tests during development.
-- `npm run check` — run lint, type checking, tests, and the production build.
-- `npm run build` — type-check and build the site into `dist`.
-
-Content lives in `constants.ts`, with interfaces in `types.ts`. Shared page chrome and backgrounds live in `components/PageLayout.tsx`; card entrance and tilt behavior lives in `components/AnimatedSection.tsx`. Author formatting is shared through `components/AuthorList.tsx`, and tag colors and project statuses through `utils/projectPresentation.ts`. Theme tokens and global styles live in `index.css`.
+The `design/` directory preserves the earlier studies, design-system reference, decisions, and review screenshots. These are local working references, not production routes; Vite’s build entry is the root `index.html`.
 
 ## Deployment
 
-This site is deployed on **GitHub Pages** and accessible at [rpseaman.com](https://rpseaman.com). Pull requests run lint, type checking, tests, and a production build. Pushes to `main` or `master` run the same checks before publishing `dist` to the `gh-pages` branch via GitHub Actions.
+The existing free deployment remains unchanged. Pull requests run checks. Pushes to `main` or `master` run checks and publish `dist` to the `gh-pages` branch using `.github/workflows/deploy.yml`. The Vite relative base and hash router are retained.
 
----
-
-## Contact
-
-Feel free to reach out:
-- 📧 Email: [ryan.patrick.seaman@gmail.com](mailto:ryan.patrick.seaman@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/ryanpseaman](https://linkedin.com/in/ryanpseaman)
-- 🐙 GitHub: [github.com/RPSeaman](https://github.com/RPSeaman)
-- 📸 Instagram: [@ryanpseaman](https://instagram.com/ryanpseaman)
-
----
-
-<div align="center">
-
-Made with ❤️ by Ryan Seaman
-
-</div>
+[Website](https://rpseaman.com) · [LinkedIn](https://linkedin.com/in/ryanpseaman) · [GitHub](https://github.com/RPSeaman)

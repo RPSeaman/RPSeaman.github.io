@@ -1,81 +1,12 @@
-import { getTagStyle, statusLabel } from '../utils/projectPresentation';
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, ExternalLink, ArrowRight } from 'lucide-react';
-import { SOFTWARE_PROJECTS } from '../constants';
-
-export const SoftwareProjects: React.FC = () => {
-  const featured = SOFTWARE_PROJECTS.filter(p => p.featured);
-
-  return (
-    <div className="space-y-8">
-      <div className="flex items-end justify-between border-b border-border-color pb-4">
-        <div>
-          <p className="text-xs font-mono text-accent-teal uppercase tracking-widest mb-2">Work</p>
-          <h2 className="text-3xl font-light text-metallic leading-tight">Projects</h2>
-        </div>
-        <Link
-          to="/projects"
-          viewTransition
-          className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-accent-teal transition-colors group pb-1 cursor-pointer"
-        >
-          View all
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </Link>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-6">
-        {featured.map((project) => (
-          <div
-            key={project.id}
-            className="group glass-panel-nested glass-panel-nested-hover p-6 rounded-xl flex flex-col gap-4"
-          >
-            {/* Header row */}
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="text-base font-semibold text-text-primary group-hover:text-accent-teal transition-colors leading-snug">
-                {project.title}
-              </h3>
-              <div className="flex gap-3 shrink-0 pt-0.5">
-                {project.github && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer"
-                    className="text-text-secondary hover:text-accent-teal transition-colors">
-                    <Github className="w-4 h-4" />
-                  </a>
-                )}
-                {project.link && (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer"
-                    className="text-text-secondary hover:text-accent-teal transition-colors">
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                )}
-              </div>
-            </div>
-
-            {/* Description */}
-            <p className="text-text-secondary text-sm leading-relaxed flex-1">
-              {project.description}
-            </p>
-
-            {/* Footer */}
-            <div className="flex flex-col gap-2 pt-2">
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map(tag => (
-                  <span key={tag} className={`text-xs font-mono border px-2 py-0.5 rounded ${getTagStyle(tag)}`}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              {project.status && (
-                <span className={`text-xs font-mono ${project.status === 'active' ? 'text-accent-teal/80 font-medium' :
-                    project.status === 'completed' ? 'text-text-secondary/70' : 'text-text-secondary/50'
-                  }`}>
-                  ● {statusLabel[project.status]}
-                </span>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
+import { ProjectArtwork } from './ProjectArtwork';
+export function SoftwareProjects() {
+  return <section id="projects" className="section selected-work" aria-labelledby="work-title">
+    <div className="section-top"><p className="meta">01 / Selected work</p><Link className="text-link" to="/projects">All projects <span aria-hidden="true">↗</span></Link></div>
+    <div className="section-heading"><h2 id="work-title">Making research<br />easier to explore.</h2><p>Tools and ideas for understanding complex data—and sharing what we find.</p></div>
+    <div className="work-grid">
+      <article><Link className="art-link" to="/projects/vitessce-annotations" aria-label="Explore Vitessce Annotations"><ProjectArtwork /></Link><div className="work-caption"><span className="meta">Summer 2026 / Narrative visualization</span><h3><Link to="/projects/vitessce-annotations">Vitessce Annotations <span aria-hidden="true">↗</span></Link></h3><p>I built a way to tell a scientific story inside Vitessce, connecting written explanations to views readers can explore.</p><Link className="text-link" to="/projects/vitessce-annotations">Explore the project <span aria-hidden="true">→</span></Link></div></article>
+      <article><Link className="art-link" to="/projects/vitesscegen" aria-label="Explore VitessceGen"><ProjectArtwork kind="generation" /></Link><div className="work-caption"><span className="meta">MMSc thesis / In progress</span><h3><Link to="/projects/vitesscegen">VitessceGen <span aria-hidden="true">↗</span></Link></h3><p>Exploring how coordinated AI agents can turn biomedical datasets into interactive visualization configurations.</p><Link className="text-link" to="/projects/vitesscegen">Explore the research <span aria-hidden="true">→</span></Link></div></article>
     </div>
-  );
-};
+  </section>;
+}

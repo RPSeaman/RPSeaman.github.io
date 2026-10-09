@@ -1,0 +1,13 @@
+/* Approved Instrument Sans features. Original font and license: ./fonts/ */
+@font-face {
+  font-family: 'Instrument Sans Local';
+  src: url('fonts/InstrumentSans-variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+:root {
+  --rs-features-heading: 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss11' 0;
+  --rs-features-body: 'ss01' 0, 'ss02' 0, 'ss03' 0, 'ss11' 0;
+}

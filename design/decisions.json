@@ -1,0 +1,197 @@
+{
+  "approved": {
+    "direction": "Warm",
+    "accent": {
+      "name": "Terracotta",
+      "hex": "#A44F38"
+    },
+    "logo": {
+      "name": "Original Open",
+      "concept": "03",
+      "status": "selected_for_now",
+      "asset": "design/logos/03-open.svg",
+      "geometry": "Original artwork unchanged",
+      "usage_rules": "Sizing, spacing, and light/dark usage approved in design/design-system.html. Original geometry preserved."
+    },
+    "homepage_visual_direction": {
+      "study": "design/homepage-study.html",
+      "status": "selected",
+      "feedback": "User liked the current vibe a lot: warm palette, spacious layout, typography, portrait, and schematic details. AperioVis was not the desired lead example."
+    },
+    "design_system": {
+      "page": "design/design-system.html",
+      "shared_styles": "design/system.css",
+      "responsive_specimen": "design/system-preview.html",
+      "status": "Approved by user as the working foundation for the personal website",
+      "assets": [
+        "design/logos/open-03-ink.svg",
+        "design/logos/open-03-paper.svg",
+        "design/logos/open-03-terracotta.svg"
+      ]
+    },
+    "typography": {
+      "primary_font": "Instrument Sans",
+      "metadata_font": "IBM Plex Mono",
+      "rules": "Type scale, weights, and usage in design/design-system.html and design/system.css",
+      "opentype": {
+        "study": "design/opentype-study.html",
+        "presets": {
+          "current": [],
+          "subtle": [
+            "ss01",
+            "ss03"
+          ],
+          "expressive": [
+            "ss01",
+            "ss02",
+            "ss03"
+          ]
+        },
+        "optional_extra": "ss11 remains disabled by default; available only as an experiment",
+        "body_text": "Original letterforms, ss01/ss02/ss03/ss11 disabled",
+        "status": "Approved: expressive for name and headings; original body forms and standard ampersand",
+        "font": "Official Instrument Sans variable TTF, with GSUB feature mappings verified locally",
+        "monogram": "Original SVG untouched",
+        "selected_features": [
+          "ss01",
+          "ss02",
+          "ss03"
+        ],
+        "shared_rules": "design/typography.css"
+      }
+    },
+    "appearance": "Warm light only — user confirmed"
+  },
+  "supporting_palette": {
+    "canvas": "#F2F0E9",
+    "text": "#242922",
+    "forest": "#283D32",
+    "soft_field": "#DFE3D8",
+    "on_accent": "#F2F0E9"
+  },
+  "proposed_not_yet_approved": {
+    "homepage": "Overall visual direction selected. Vitessce Annotations project wording and treatment are provisional; user is not yet convinced. Preserve confirmed attribution to Ryan with guidance from Mark and Nils.",
+    "process_visuals": "Conceptual schematic of a finding, an authored frame (text + view state + shapes), and coordinated tissue/embedding views. Based on manuscript, not actual product imagery or an original whiteboard."
+  },
+  "references": [
+    "https://rivian.com/",
+    "https://tekt.com.au/",
+    "https://biotic.org/",
+    "https://tbdstudio.framer.ai/",
+    "https://shift5.io/"
+  ],
+  "preferences": {
+    "career_goal": "Industry employment in health technology (examples: Garmin and WHOOP) or biotechnology.",
+    "website_audience": "Industry hiring teams in health technology and biotechnology, with emphasis on collaborative research and project or product work.",
+    "preferred_work": "Working with people, collaborating, generating ideas, research, and project management. Interested in data science but prefers work that is not deeply technical or coding-heavy.",
+    "working_style": "Strong preference for in-person collaboration: getting on a whiteboard with a few coworkers, drawing schematics and plans, annotating them, and repeatedly revising the plan together.",
+    "positioning_constraint": "Technical background should support scientific judgment and collaboration; do not position primarily as a software engineer or imply unverified product/project leadership experience.",
+    "logo_favorites": [
+      "01 / Joined",
+      "03 / Open"
+    ],
+    "logo_character": "Preserve the light, open feel of original Open #3. User disliked both refinements.",
+    "logo_top_contender": "03 / Open (original artwork)",
+    "logo_rejected_refinements": [
+      "A / Flow",
+      "B / Soft cut"
+    ],
+    "logo_new_idea": "Lowercase r with an s tucked underneath the arch of the r; explore separately.",
+    "logo_tucked_refinement": "Match the shapes of the two upper curves; align their right-hand tips vertically, with the s curve directly beneath the r curve.",
+    "featured_project_candidates": [
+      "Vitessce Annotations",
+      "VitessceGen"
+    ],
+    "next_design_step": "Apply the approved design system to the actual website. Featured project wording and presentation remain provisional.",
+    "deployment": "Preserve the existing free GitHub Pages deployment",
+    "copy_tone": "Prefer straightforward section headings over slogan-like phrases. Avoid em dashes in the introduction.",
+    "career_document": "Use the résumé consistently; do not offer a separate CV link.",
+    "resume_version": {
+      "current": "public/files/RyanSeamanResume-2026-10-08-r3.pdf",
+      "archived": "public/files/archive/RyanSeamanResume-archived-2026-10-08.pdf",
+      "style": "Conventional one-page resume; white background, Instrument Sans, restrained terracotta accents.",
+      "content_status": "Updated from existing documents and confirmed contributions; original titles and dates retained pending any user corrections.",
+      "positioning": "Keep research teaching and mentoring; exclude admissions/tour-guide work. Retain the longer summary from the first October 8 revision. General version keeps one first-author publication."
+    }
+  },
+  "logo_exploration_history": {
+    "study": "design/logo-study.html",
+    "concepts": [
+      "Joined uppercase RS",
+      "Constructed uppercase RS",
+      "Open lowercase rs"
+    ],
+    "selected": "03 / Open (original artwork; selected for now)",
+    "refinement_study": "design/logo-refinements.html",
+    "refinements": [
+      "A / Flow",
+      "B / Soft cut"
+    ],
+    "current_study": "design/logo-tucked-study.html",
+    "current_tucked_asset": "design/logos/07-tucked-aligned.svg"
+  },
+  "project_evidence": {
+    "vitessce_annotations": {
+      "source": "User-supplied manuscript draft, read 2026-10-08",
+      "title": "Vitessce Annotations: Frame-based annotation and narrative visualization for spatial and single-cell data",
+      "authors": [
+        "Ryan P. Seaman",
+        "Mark S. Keller",
+        "Nils Gehlenborg"
+      ],
+      "status": "Draft manuscript; publication, release, and adoption not independently verified",
+      "core_concept": "Narrative frames combine text, view state, and shapes within Vitessce, updating coordinated views together while retaining exploration.",
+      "examples": [
+        "22-frame osmFISH narrative",
+        "Kidney pathomics comparison",
+        "Imported 14-step Minerva story"
+      ],
+      "unknown": [
+        "Team design discussions and iterations",
+        "Measured user outcomes",
+        "Public demo/release status"
+      ],
+      "personal_contribution": {
+        "confirmed_by": "User, directly in conversation",
+        "scope": "Created and built the full annotation system within the pre-existing Vitessce framework",
+        "supervision_and_guidance": [
+          "Mark S. Keller",
+          "Nils Gehlenborg"
+        ],
+        "attribution_boundary": "Do not attribute creation of the original Vitessce framework to Ryan."
+      }
+    }
+  },
+  "implementation_review": {
+    "date": "2026-10-08",
+    "status": "Implemented locally; awaiting user review, not published",
+    "changes": [
+      "Applied identity to React site",
+      "Two featured project stories",
+      "Shared searchable project and publication archives",
+      "Coordinated conceptual SVG artwork",
+      "Removed self-rated skill scores and unused animation libraries"
+    ],
+    "provisional": [
+      "Project narrative wording",
+      "New project illustrations",
+      "New archive layouts"
+    ],
+    "annotation_revision": {
+      "navigation": "All three main links lead to homepage sections; full collections have explicit links.",
+      "headings": [
+        "How I work",
+        "Experience & education",
+        "Selected publications"
+      ],
+      "graphics": "All six projects have text-free conceptual SVG artwork.",
+      "portrait": "User-supplied final color crop, used as-is without generated edits or color treatment. Original black-and-white file retained.",
+      "hero": {
+        "headline": "Biomedical research. Health technology.",
+        "style": "Preserve ink and terracotta; use direct subject matter instead of the Together slogan.",
+        "intro": "Removed the whiteboard aside from the introduction; retain the more personal process description in About.",
+        "portrait_caption": "Ryan Seaman only; removed Research. Ideas. Collaboration."
+      }
+    }
+  }
+}
