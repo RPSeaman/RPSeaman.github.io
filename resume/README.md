@@ -1,9 +1,9 @@
 # Resume versions
 
-- Current revision: `2026-10-08-r3`.
-- Editable content: `resume-2026-10-08-r3.json`.
+- Current revision: `2026-10-23`.
+- Editable content: `resume-2026-10-23.json`.
 - Finished PDF and preview: `../output/pdf/`.
-- Website copy: `../public/files/RyanSeamanResume-2026-10-08-r3.pdf`.
+- Website copy: `../public/files/RyanSeamanResume-2026-10-23.pdf`.
 - Prior resume: `../public/files/archive/RyanSeamanResume-archived-2026-10-08.pdf`.
 
 The archive date is the date the earlier file was preserved, not an asserted date of authorship. The original `public/files/RyanSeamanResume.pdf` is also unchanged so older direct links continue to work. All current website links use `RESUME_URL` in `constants.ts`.
@@ -15,3 +15,5 @@ The layout is one US Letter page, white background, a single reading column, con
 To rebuild, use Python with `fontTools` for `prepare_fonts.py`, then Python with `reportlab` for `build_resume.py`. Fonts are derived from the existing licensed source under `assets/fonts/`. The PDF builder writes only to `output/pdf`; visually review the result before copying it into `public/files` or updating the website link. Intermediate fonts and renders belong in `tmp/pdfs`.
 
 Revision 3 removes the admissions/tour-guide entry and restores the full summary from the first October 8 revision. Research teaching and mentoring remain; earlier PDFs and source files are preserved.
+
+October 23 revision incorporates the user-supplied resume: a product/project-focused summary, natural-language prompt-to-visualization workflow work for VitessceGen, and the Harvard Medical School Teaching Fellow role for BMI 706 beginning October 2026. Font sizes, palette, and single-column style are retained; vertical spacing is slightly tightened to keep all content on one page. All October 8 revisions remain unchanged. The website mirrors the teaching role, VitessceGen focus, and career interests.

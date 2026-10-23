@@ -107,11 +107,12 @@
     "copy_tone": "Prefer straightforward section headings over slogan-like phrases. Avoid em dashes in the introduction.",
     "career_document": "Use the résumé consistently; do not offer a separate CV link.",
     "resume_version": {
-      "current": "public/files/RyanSeamanResume-2026-10-08-r3.pdf",
+      "current": "public/files/RyanSeamanResume-2026-10-23.pdf",
       "archived": "public/files/archive/RyanSeamanResume-archived-2026-10-08.pdf",
       "style": "Conventional one-page resume; white background, Instrument Sans, restrained terracotta accents.",
       "content_status": "Updated from existing documents and confirmed contributions; original titles and dates retained pending any user corrections.",
-      "positioning": "Keep research teaching and mentoring; exclude admissions/tour-guide work. Retain the longer summary from the first October 8 revision. General version keeps one first-author publication."
+      "positioning": "Keep research teaching and mentoring; exclude admissions/tour-guide work. Retain the longer summary from the first October 8 revision. General version keeps one first-author publication.",
+      "october_23_update": "User-supplied summary and VitessceGen workflow changes; new BMI 706 Teaching Fellow role. Existing style and all older dated PDFs retained."
     }
   },
   "logo_exploration_history": {

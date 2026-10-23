@@ -28,6 +28,7 @@ export interface Education {
 export interface WorkExperience {
   position: string;
   organization: string;
+  description?: string;
   location: string;
   period: string;
 }

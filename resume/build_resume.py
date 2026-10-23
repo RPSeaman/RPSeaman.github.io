@@ -17,8 +17,9 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 from reportlab.lib.pagesizes import letter
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / (sys.argv[1] if len(sys.argv) > 1 else 'resume/resume-2026-10-08-r3.json')
+SOURCE = ROOT / (sys.argv[1] if len(sys.argv) > 1 else 'resume/resume-2026-10-23.json')
 DATA = json.loads(SOURCE.read_text())
+LAYOUT = DATA.get('layout', {})
 OUT = ROOT / f'output/pdf/RyanSeamanResume-{DATA.get("version", DATA["date"])}.pdf'
 for name in ['Regular', 'Semibold']:
     pdfmetrics.registerFont(TTFont(f'Instrument-{name}', str(ROOT / f'tmp/pdfs/InstrumentSans-{name}.ttf')))
@@ -31,10 +32,10 @@ WIDTH = 514
 styles = {
     'name': ParagraphStyle('name',fontName='Instrument-Semibold',fontSize=24,leading=28,textColor=INK),
     'contact': ParagraphStyle('contact',fontName='Instrument-Regular',fontSize=9.3,leading=12,textColor=INK),
-    'body': ParagraphStyle('body',fontName='Instrument-Regular',fontSize=10.5,leading=13.3,textColor=INK),
-    'bullet': ParagraphStyle('bullet',fontName='Instrument-Regular',fontSize=10.5,leading=13.3,textColor=INK,leftIndent=10,firstLineIndent=0,bulletIndent=0,bulletFontName='Instrument-Regular',bulletFontSize=10.5,spaceAfter=3),
-    'section': ParagraphStyle('section',fontName='Instrument-Semibold',fontSize=10,leading=12,textColor=CLAY,spaceBefore=10,spaceAfter=4),
-    'role': ParagraphStyle('role',fontName='Instrument-Semibold',fontSize=10.5,leading=13.3,textColor=INK),
+    'body': ParagraphStyle('body',fontName='Instrument-Regular',fontSize=10.5,leading=LAYOUT.get('body_leading', 13.3),textColor=INK),
+    'bullet': ParagraphStyle('bullet',fontName='Instrument-Regular',fontSize=10.5,leading=LAYOUT.get('body_leading', 13.3),textColor=INK,leftIndent=10,firstLineIndent=0,bulletIndent=0,bulletFontName='Instrument-Regular',bulletFontSize=10.5,spaceAfter=LAYOUT.get('bullet_space_after', 3)),
+    'section': ParagraphStyle('section',fontName='Instrument-Semibold',fontSize=10,leading=12,textColor=CLAY,spaceBefore=LAYOUT.get('section_space_before', 10),spaceAfter=4),
+    'role': ParagraphStyle('role',fontName='Instrument-Semibold',fontSize=10.5,leading=LAYOUT.get('body_leading', 13.3),textColor=INK),
     'date': ParagraphStyle('date',fontName='Instrument-Regular',fontSize=9.5,leading=13.3,textColor=MUTED,alignment=TA_RIGHT),
     'organization': ParagraphStyle('organization',fontName='Instrument-Regular',fontSize=10,leading=12.6,textColor=MUTED),
     'publication': ParagraphStyle('publication',fontName='Instrument-Regular',fontSize=9.4,leading=12,textColor=INK,spaceAfter=4),
@@ -59,7 +60,7 @@ section('SUMMARY')
 story.append(paragraph(escape(DATA['summary'])))
 section('EXPERIENCE')
 for i, job in enumerate(DATA['experience']):
-    if i: story.append(Spacer(1,6))
+    if i: story.append(Spacer(1,LAYOUT.get('role_space', 6)))
     # Organization appears in the reading flow; dates use only a right-aligned tabular line.
     first_bullet = paragraph(escape(job['bullets'][0]), 'bullet')
     first_bullet.bulletText = '\u2022'
@@ -75,6 +76,8 @@ if DATA.get('collaboration'):
     for i, activity in enumerate(DATA['collaboration']):
         if i: story.append(Spacer(1,4))
         story.append(row(escape(activity['organization']), escape(activity['dates'])))
+        if activity.get('detail'):
+            story.append(paragraph(escape(activity['detail']), 'organization'))
         for bullet in activity['bullets']:
             p = paragraph(escape(bullet), 'bullet')
             p.bulletText = '\u2022'
@@ -90,7 +93,7 @@ for paper in DATA['publications']:
     story.append(paragraph(f'{authors} ({paper["year"]}). <link href="{paper["url"]}">{escape(paper["title"])}</link> {escape(paper["journal"])}.', 'publication'))
 
 OUT.parent.mkdir(parents=True,exist_ok=True)
-doc = SimpleDocTemplate(str(OUT), pagesize=letter, leftMargin=43,rightMargin=43,topMargin=34,bottomMargin=30,
+doc = SimpleDocTemplate(str(OUT), pagesize=letter, leftMargin=43,rightMargin=43,topMargin=LAYOUT.get('top_margin', 34),bottomMargin=30,
                         title='Ryan P. Seaman - Resume',author='Ryan P. Seaman',subject=f'Resume updated {DATA["date"]}')
 doc.build(story)
 print(OUT)

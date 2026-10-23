@@ -1,7 +1,7 @@
 import { Project, SocialLink, Education, WorkExperience, SoftwareProject } from './types';
 
 export const PORTFOLIO_OWNER = "Ryan Seaman";
-export const RESUME_URL = './files/RyanSeamanResume-2026-10-08-r3.pdf';
+export const RESUME_URL = './files/RyanSeamanResume-2026-10-23.pdf';
 export const OWNER_ROLE = "Biomedical Informatics";
 
 export const BIO = `I’m Ryan, a biomedical informatics researcher interested in turning scientific questions into useful health technology. I enjoy working through ideas with other people.`;
@@ -95,7 +95,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
     detailPath: '/projects/vitesscegen',
     note: 'MMSc thesis · In progress',
     title: 'VitessceGen',
-    description: 'MMSc thesis project at the HIDIVE Lab, Harvard Medical School. VitessceGen uses a multi-agent LLM pipeline to automatically generate Vitessce visualization configurations from biomedical datasets. The research explores how coordinated agents can analyze dataset structure, select visualization components, and produce configurations for spatial and single-cell data.',
+    description: 'MMSc thesis project at the HIDIVE Lab, Harvard Medical School. I’m developing VitessceGen, a multi-agent AI tool for generating visualization configurations from spatial and single-cell biomedical data. My work includes designing workflows that turn researchers’ natural-language questions into tailored, coordinated views of their data.',
     tags: ['LLM', 'Multi-Agent', 'Vitessce', 'Data Visualization', 'Python'],
     imageUrl: './images/VitessceGen.png',
     imageBg: 'bg-white',
@@ -178,20 +178,27 @@ export const EDUCATION: Education[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    position: 'Thesis Research, HIDIVE Lab',
+    position: 'Graduate Research Assistant, HIDIVE Lab',
     organization: 'Harvard Medical School, Dr. Nils Gehlenborg',
     location: 'Boston, MA',
     period: 'December 2025 – Present'
   },
   {
-    position: 'Summer Research Intern',
+    position: 'Teaching Fellow',
+    organization: 'Harvard Medical School',
+    description: 'BMI 706: Data Visualization for Biomedical Applications · Instructor: Dr. Nils Gehlenborg',
+    location: 'Boston, MA',
+    period: 'October 2026 – Present'
+  },
+  {
+    position: 'Summer Research Intern, HIDIVE Lab',
     organization: 'Harvard Medical School, Dr. Nils Gehlenborg',
     location: 'Boston, MA',
     period: 'May 2026 – August 2026'
   },
   {
-    position: 'Bioinformatician, Comparative Genomic and Data Science Core',
-    organization: 'MDI Biological Laboratory',
+    position: 'Bioinformatician',
+    organization: 'MDI Biological Laboratory, Comparative Genomic and Data Science Core',
     location: 'Bar Harbor, ME',
     period: 'January 2023 – August 2025'
   }
