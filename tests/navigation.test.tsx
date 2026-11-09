@@ -26,14 +26,14 @@ describe('site navigation', () => {
     await user.click(screen.getByRole('link', { name: 'Explore Vitessce Annotations' }));
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Vitessce Annotations.');
     expect(document.title).toBe('Vitessce Annotations — Ryan Seaman');
-    await user.click(screen.getByRole('link', { name: /Keep exploring VitessceGen/ }));
+    await user.click(screen.getByRole('link', { name: /Next project VitessceGen/ }));
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('VitessceGen.');
     await user.click(screen.getAllByRole('link', { name: '← All projects' })[0]);
     expect(screen.getByRole('textbox', { name: 'Search projects' })).toBeTruthy();
   });
 
   it.each([
-    { label: 'Work', id: 'projects', heading: 'Making research easier to explore.' },
+    { label: 'Work', id: 'projects', heading: 'Research & visualization projects' },
     { label: 'About', id: 'about', heading: 'How I work' },
     { label: 'Publications', id: 'publications', heading: 'Selected publications' },
   ])('takes $label to its homepage section, including repeat visits', async ({ label, id, heading }) => {

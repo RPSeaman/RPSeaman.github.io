@@ -194,5 +194,18 @@
         "portrait_caption": "Ryan Seaman only; removed Research. Ideas. Collaboration."
       }
     }
+  },
+  "copy_review_2026_11_09": {
+    "status": "First edit implemented locally for review",
+    "scope": "Copy only; preserve sections, routes, visual identity and project evidence.",
+    "approved_intro": "I’m Ryan, an MMSc student in Biomedical Informatics at Harvard Medical School. My research explores how AI can help researchers create interactive visualizations of biomedical data.",
+    "approved_about": "I enjoy working through problems with other people, sketching out an approach, and revising it together. My background is in computational biology and research software.",
+    "principles": [
+      "Use descriptive headings instead of slogans and rhetorical questions.",
+      "State career interests once in Contact.",
+      "Shorten project summaries; preserve contribution, guidance, status, and examples.",
+      "Keep teaching in the experience record but omit it from About."
+    ],
+    "linkedin": "Plan and draft only; do not edit the profile."
   }
 }

@@ -4,7 +4,7 @@ export const PORTFOLIO_OWNER = "Ryan Seaman";
 export const RESUME_URL = './files/RyanSeamanResume-2026-10-23.pdf';
 export const OWNER_ROLE = "Biomedical Informatics";
 
-export const BIO = `I’m Ryan, a biomedical informatics researcher interested in turning scientific questions into useful health technology. I enjoy working through ideas with other people.`;
+export const BIO = `I’m Ryan, an MMSc student in Biomedical Informatics at Harvard Medical School. My research explores how AI can help researchers create interactive visualizations of biomedical data.`;
 
 
 export const PROJECTS: Project[] = [
@@ -83,7 +83,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'annotations',
     title: 'Vitessce Annotations',
-    description: 'An annotation and narrative system that connects scientific explanations to interactive spatial and single-cell data. I built the full annotation system within the existing Vitessce framework, with supervision and guidance from Mark S. Keller and Nils Gehlenborg.',
+    description: 'I built annotation and narrative tools within Vitessce for spatial and single-cell data, with guidance from Mark S. Keller and Nils Gehlenborg.',
     tags: ['Narrative Visualization', 'Vitessce', 'Spatial Data'],
     year: '2026',
     featured: true,
@@ -95,7 +95,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
     detailPath: '/projects/vitesscegen',
     note: 'MMSc thesis · In progress',
     title: 'VitessceGen',
-    description: 'MMSc thesis project at the HIDIVE Lab, Harvard Medical School. I’m developing VitessceGen, a multi-agent AI tool for generating visualization configurations from spatial and single-cell biomedical data. My work includes designing workflows that turn researchers’ natural-language questions into tailored, coordinated views of their data.',
+    description: 'My MMSc thesis uses AI agents to generate Vitessce visualization configurations from biomedical data and researchers’ natural-language questions.',
     tags: ['LLM', 'Multi-Agent', 'Vitessce', 'Data Visualization', 'Python'],
     imageUrl: './images/VitessceGen.png',
     imageBg: 'bg-white',
@@ -106,7 +106,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp1',
     title: 'AperioVis',
-    description: 'An interactive Shiny for Python application for exploring processed single-cell RNA sequencing datasets. It brings quality-controlled, normalized data and dimensionality-reduction views into a browser interface for researchers.',
+    description: 'A Shiny for Python application for exploring processed single-cell RNA sequencing data through interactive plots.',
     tags: ['Shiny for Python', 'scRNAseq', 'Data Visualization'],
     imageUrl: './images/AperioVis.png',
     imageBg: 'bg-white',
@@ -118,7 +118,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp2',
     title: 'scscape',
-    description: 'nf-core Nextflow pipeline for multi-sample single-cell RNA-seq analysis downstream of count matrix generation. Built on the Seurat R package, the pipeline handles QC, normalization, doublet removal, SCTransform, PCA, integration, clustering (Louvain), and dimensionality reduction, producing analysis-ready Seurat objects with cell clusters and expression projections.',
+    description: 'A Nextflow pipeline built on Seurat for reproducible analysis of multiple single-cell RNA sequencing samples, from quality control through integration and clustering.',
     tags: ['Nextflow', 'nf-core', 'Seurat', 'scRNAseq', 'R'],
     imageUrl: './images/scscape.png',
     imageBg: 'bg-white',
@@ -130,7 +130,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp5',
     title: 'Cadence Health',
-    description: 'A digital health concept exploring how continuous biosignal data could become more useful, understandable health information. An early prototype connects my interests in health technology and interpreting complex data.',
+    description: 'An early digital health prototype exploring how to present and interpret continuous biosignal data.',
     tags: ['Digital Health', 'Health Tech', 'Startup'],
     imageUrl: './images/CadenceHealth.png',
     imageBg: 'bg-white',
@@ -143,7 +143,7 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
   {
     id: 'sp3',
     title: 'Personal Website',
-    description: 'A personal site built around a warm visual identity, accessible typography, and stories about research. Built with React, TypeScript, and Vite, with continuous deployment through GitHub Actions to GitHub Pages.',
+    description: 'This website, built with React, TypeScript, and Vite and deployed through GitHub Pages.',
     tags: ['React', 'TypeScript', 'Vite'],
     imageUrl: './images/Website.png',
     github: 'https://github.com/RPSeaman/RPSeaman.github.io',
