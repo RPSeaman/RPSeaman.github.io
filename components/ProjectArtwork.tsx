@@ -1,3 +1,5 @@
+import { Monogram } from './Monogram';
+
 export type ProjectArtworkKind = 'annotations' | 'generation' | 'aperiovis' | 'scscape' | 'cadence' | 'website';
 type Props = { kind?: ProjectArtworkKind; compact?: boolean };
 
@@ -65,7 +67,7 @@ export function ProjectArtwork({ kind = 'annotations', compact = false }: Props)
           <rect x="111" y="77" width="398" height="236" rx="3" fill="var(--paper)" stroke="var(--forest)" strokeWidth="1.5" />
           <path d="M111 112H509M354 96H384M398 96H428M442 96H481" stroke="var(--forest)" opacity=".45" />
           <path d="M137 94H161" stroke="var(--clay)" strokeWidth="3" />
-          <g transform="translate(145 126) scale(1.25)"><path d="M15 77V35M15 49C15 35 32 29 42 37M83 38C73 30 54 31 51 42C47 57 85 51 83 66C81 80 59 82 48 73" stroke="var(--forest)" strokeWidth="7" /></g>
+          <Monogram x="145" y="126" width="125" height="125" />
           <rect x="343" y="139" width="139" height="147" rx="2" fill="var(--field)" />
           <circle cx="412" cy="190" r="27" stroke="var(--forest)" opacity=".5" />
           <path d="M371 259C371 212 453 212 453 259" stroke="var(--forest)" opacity=".5" />

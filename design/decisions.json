@@ -6,17 +6,18 @@
       "hex": "#A44F38"
     },
     "logo": {
-      "name": "Original Open",
-      "concept": "03",
-      "status": "selected_for_now",
-      "asset": "design/logos/03-open.svg",
-      "geometry": "Original artwork unchanged",
-      "usage_rules": "Sizing, spacing, and light/dark usage approved in design/design-system.html. Original geometry preserved."
+      "name": "Canopy aligned",
+      "concept": "15 / Solid tile",
+      "status": "approved",
+      "selected_on": "2026-11-14",
+      "asset": "design/logos/canopy-aligned.svg",
+      "geometry": "Solid square tile with a shared r/s cutout. The r stem ends at y=90 and the s lower stroke reaches y=90; after the 0.7 scale and translation, both visible lower edges are at y=77.",
+      "usage_rules": "Use the exact approved geometry with the existing lowercase Instrument Sans wordmark. Forest on paper is primary; ink, paper reverse, and terracotta exports are available. Sizing and spacing are in design/design-system.html."
     },
     "homepage_visual_direction": {
-      "study": "design/homepage-study.html",
       "status": "selected",
-      "feedback": "User liked the current vibe a lot: warm palette, spacious layout, typography, portrait, and schematic details. AperioVis was not the desired lead example."
+      "feedback": "User liked the current vibe a lot: warm palette, spacious layout, typography, portrait, and schematic details. AperioVis was not the desired lead example.",
+      "implementation": "App.tsx"
     },
     "design_system": {
       "page": "design/design-system.html",
@@ -24,9 +25,11 @@
       "responsive_specimen": "design/system-preview.html",
       "status": "Approved by user as the working foundation for the personal website",
       "assets": [
-        "design/logos/open-03-ink.svg",
-        "design/logos/open-03-paper.svg",
-        "design/logos/open-03-terracotta.svg"
+        "design/logos/canopy-aligned.svg",
+        "design/logos/canopy-aligned-forest.svg",
+        "design/logos/canopy-aligned-ink.svg",
+        "design/logos/canopy-aligned-paper.svg",
+        "design/logos/canopy-aligned-terracotta.svg"
       ]
     },
     "typography": {
@@ -34,7 +37,6 @@
       "metadata_font": "IBM Plex Mono",
       "rules": "Type scale, weights, and usage in design/design-system.html and design/system.css",
       "opentype": {
-        "study": "design/opentype-study.html",
         "presets": {
           "current": [],
           "subtle": [
@@ -51,7 +53,7 @@
         "body_text": "Original letterforms, ss01/ss02/ss03/ss11 disabled",
         "status": "Approved: expressive for name and headings; original body forms and standard ampersand",
         "font": "Official Instrument Sans variable TTF, with GSUB feature mappings verified locally",
-        "monogram": "Original SVG untouched",
+        "monogram": "Canopy aligned is a separate SVG mark; wordmark type features remain unchanged.",
         "selected_features": [
           "ss01",
           "ss02",
@@ -90,19 +92,19 @@
       "01 / Joined",
       "03 / Open"
     ],
-    "logo_character": "Preserve the light, open feel of original Open #3. User disliked both refinements.",
-    "logo_top_contender": "03 / Open (original artwork)",
+    "logo_character": "Compact solid tile with a shared r/s cutout and flush lower edges; keep the existing warm palette and lowercase wordmark.",
+    "logo_top_contender": "Canopy aligned (approved 2026-11-14)",
     "logo_rejected_refinements": [
       "A / Flow",
       "B / Soft cut"
     ],
-    "logo_new_idea": "Lowercase r with an s tucked underneath the arch of the r; explore separately.",
+    "logo_new_idea": "Resolved in Canopy aligned: lowercase r sheltering an s inside a solid tile.",
     "logo_tucked_refinement": "Match the shapes of the two upper curves; align their right-hand tips vertically, with the s curve directly beneath the r curve.",
     "featured_project_candidates": [
       "Vitessce Annotations",
       "VitessceGen"
     ],
-    "next_design_step": "Apply the approved design system to the actual website. Featured project wording and presentation remain provisional.",
+    "next_design_step": "Maintain the approved identity on the website. Featured project wording and presentation remain provisional.",
     "deployment": "Preserve the existing free GitHub Pages deployment",
     "copy_tone": "Prefer straightforward section headings over slogan-like phrases. Avoid em dashes in the introduction.",
     "career_document": "Use the résumé consistently; do not offer a separate CV link.",
@@ -116,20 +118,41 @@
     }
   },
   "logo_exploration_history": {
-    "study": "design/logo-study.html",
     "concepts": [
       "Joined uppercase RS",
       "Constructed uppercase RS",
       "Open lowercase rs"
     ],
-    "selected": "03 / Open (original artwork; selected for now)",
-    "refinement_study": "design/logo-refinements.html",
+    "selected": "Canopy aligned / solid tile (approved 2026-11-14)",
     "refinements": [
       "A / Flow",
       "B / Soft cut"
     ],
-    "current_study": "design/logo-tucked-study.html",
-    "current_tucked_asset": "design/logos/07-tucked-aligned.svg"
+    "previous_selection": "03 / Open (original artwork; selected for now)",
+    "current_asset": "design/logos/canopy-aligned.svg",
+    "latest_exploration": {
+      "reference": "User-supplied Kina House example: compact monogram with shared geometry inside a square.",
+      "initial_concepts": [
+        "Canopy",
+        "Counterform",
+        "Ribbon"
+      ],
+      "boxed_concepts": [
+        "Shared edge",
+        "Inset",
+        "Open corner",
+        "Solid tile"
+      ],
+      "solid_tile_concepts": [
+        "Canopy aligned",
+        "Lowercase pair",
+        "Uppercase pair",
+        "Stacked RS",
+        "Offset RS"
+      ],
+      "selected": "Canopy aligned",
+      "final_feedback": "User liked the solid tile and asked for the r and s lower edges to line up, then selected Canopy aligned."
+    }
   },
   "project_evidence": {
     "vitessce_annotations": {
@@ -205,7 +228,6 @@
       "State career interests once in Contact.",
       "Shorten project summaries; preserve contribution, guidance, status, and examples.",
       "Keep teaching in the experience record but omit it from About."
-    ],
-    "linkedin": "Plan and draft only; do not edit the profile."
+    ]
   }
 }

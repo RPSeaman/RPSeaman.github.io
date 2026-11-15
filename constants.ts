@@ -1,8 +1,6 @@
 import { Project, SocialLink, Education, WorkExperience, SoftwareProject } from './types';
 
-export const PORTFOLIO_OWNER = "Ryan Seaman";
 export const RESUME_URL = './files/RyanSeamanResume-2026-10-23.pdf';
-export const OWNER_ROLE = "Biomedical Informatics";
 
 export const BIO = `I’m Ryan, an MMSc student in Biomedical Informatics at Harvard Medical School. My research explores how AI can help researchers create interactive visualizations of biomedical data.`;
 
@@ -46,7 +44,6 @@ export const PROJECTS: Project[] = [
     title: 'Sodium-glucose co-transporter 2 inhibition improves age-dependent kidney microvascular rarefaction',
     description: 'Paulmann A, Cox MD, Boewer T, Somers HM, Fuqua H, __**Seaman RP**__, Graber JH, Mahajan A, Johnson CP, Beverly-Staggs LL, Sandhi S, Schenk H, Haller H',
     tags: ['African Turquoise Killifish', 'scRNAseq'],
-    imageUrl: './images/ATK.jpg',
     link: 'https://pubmed.ncbi.nlm.nih.gov/41448458/',
     journal: 'Kidney Int.',
     citation: 'Kidney Int. 2026 Mar;109(3):525-544',
@@ -58,7 +55,6 @@ export const PROJECTS: Project[] = [
     title: 'The essential role of connective-tissue cells during axolotl limb regeneration',
     description: 'García-García D, Knapp D, Kim M, Jamwal K, Fuqua H, __**Seaman RP**__, Grindle RE, Nowoshilow S, Novatchkova M, Kolling FW, Graber JH, Murawala P',
     tags: ['Axolotl', 'scRNAseq', 'Spatial'],
-    imageUrl: './images/AXO.jpeg',
     link: 'https://pubmed.ncbi.nlm.nih.gov/40236065',
     journal: 'bioRxiv',
     citation: 'bioRxiv [Preprint]. 2025 Apr 2:2025.03.30.645595',
@@ -70,7 +66,6 @@ export const PROJECTS: Project[] = [
     title: 'A cloud-based training module for efficient de novo transcriptome assembly using Nextflow and Google Cloud',
     description: '__**Seaman RP**__, Campbell R, Doe V, Yosufzai Z, Graber JH',
     tags: ['Transcriptome Assembly', 'GCP', 'Nextflow'],
-    imageUrl: './images/SEQ.jpg',
     link: 'https://pubmed.ncbi.nlm.nih.gov/38941113',
     journal: 'Briefings in Bioinformatics',
     citation: 'Brief Bioinform. 2024 May 23;25(4):bbae313',
@@ -97,8 +92,6 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
     title: 'VitessceGen',
     description: 'My MMSc thesis uses AI agents to generate Vitessce visualization configurations from biomedical data and researchers’ natural-language questions.',
     tags: ['LLM', 'Multi-Agent', 'Vitessce', 'Data Visualization', 'Python'],
-    imageUrl: './images/VitessceGen.png',
-    imageBg: 'bg-white',
     year: '2026',
     status: 'active',
     featured: true
@@ -108,8 +101,6 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
     title: 'AperioVis',
     description: 'A Shiny for Python application for exploring processed single-cell RNA sequencing data through interactive plots.',
     tags: ['Shiny for Python', 'scRNAseq', 'Data Visualization'],
-    imageUrl: './images/AperioVis.png',
-    imageBg: 'bg-white',
     github: 'https://github.com/RPSeaman/AperioVis',
     year: '2026',
     status: 'completed',
@@ -120,8 +111,6 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
     title: 'scscape',
     description: 'A Nextflow pipeline built on Seurat for reproducible analysis of multiple single-cell RNA sequencing samples, from quality control through integration and clustering.',
     tags: ['Nextflow', 'nf-core', 'Seurat', 'scRNAseq', 'R'],
-    imageUrl: './images/scscape.png',
-    imageBg: 'bg-white',
     github: 'https://github.com/mdibl/scscape',
     year: '2025',
     status: 'completed',
@@ -132,8 +121,6 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
     title: 'Cadence Health',
     description: 'An early digital health prototype exploring how to present and interpret continuous biosignal data.',
     tags: ['Digital Health', 'Health Tech', 'Startup'],
-    imageUrl: './images/CadenceHealth.png',
-    imageBg: 'bg-white',
     link: 'https://rpseaman.com/cadence-health',
     linkLabel: 'Prototype',
     year: '2026',
@@ -145,7 +132,6 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
     title: 'Personal Website',
     description: 'This website, built with React, TypeScript, and Vite and deployed through GitHub Pages.',
     tags: ['React', 'TypeScript', 'Vite'],
-    imageUrl: './images/Website.png',
     github: 'https://github.com/RPSeaman/RPSeaman.github.io',
     year: '2026',
     status: 'active',
@@ -154,10 +140,10 @@ export const SOFTWARE_PROJECTS: SoftwareProject[] = [
 ];
 
 export const SOCIALS: SocialLink[] = [
-  { platform: 'GitHub', url: 'https://github.com/RPSeaman', icon: 'github' },
-  { platform: 'LinkedIn', url: 'https://linkedin.com/in/ryanpseaman', icon: 'linkedin' },
-  { platform: 'ORCID', url: 'https://orcid.org/0009-0006-1204-4176', icon: 'orcid' },
-  { platform: 'Instagram', url: 'https://instagram.com/ryanpseaman', icon: 'instagram' },
+  { platform: 'GitHub', url: 'https://github.com/RPSeaman' },
+  { platform: 'LinkedIn', url: 'https://linkedin.com/in/ryanpseaman' },
+  { platform: 'ORCID', url: 'https://orcid.org/0009-0006-1204-4176' },
+  { platform: 'Instagram', url: 'https://instagram.com/ryanpseaman' },
 
 ];
 

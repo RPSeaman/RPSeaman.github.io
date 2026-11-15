@@ -1,7 +1,7 @@
-/* Approved Instrument Sans features. Original font and license: ./fonts/ */
+/* Approved Instrument Sans features. Original font and license: ../assets/fonts/ */
 @font-face {
   font-family: 'Instrument Sans Local';
-  src: url('fonts/InstrumentSans-variable.ttf') format('truetype');
+  src: url('../assets/fonts/InstrumentSans-variable.ttf') format('truetype');
   font-style: normal;
   font-weight: 400 700;
   font-stretch: 75% 100%;

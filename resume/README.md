@@ -2,7 +2,7 @@
 
 - Current revision: `2026-10-23`.
 - Editable content: `resume-2026-10-23.json`.
-- Finished PDF and preview: `../output/pdf/`.
+- Generated PDF and preview (not checked in): `../output/pdf/`.
 - Website copy: `../public/files/RyanSeamanResume-2026-10-23.pdf`.
 - Prior resume: `../public/files/archive/RyanSeamanResume-archived-2026-10-08.pdf`.
 

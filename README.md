@@ -29,13 +29,15 @@ Existing publication citations and external links have been retained. Vitessce A
 
 ## Visual identity
 
-Production styles and design tokens live in `index.css`. The site uses warm paper, terracotta, and forest green; a single light appearance; and the original Open 03 monogram.
+Production styles and design tokens live in `index.css`. The site uses warm paper, terracotta, and forest green; a single light appearance; and the Canopy aligned solid-tile monogram. Its r and s have flush lower edges. `components/Monogram.tsx` supplies the shared mark for the header and website illustration, and the approved SVG exports are in `design/logos/canopy-aligned*.svg`.
 
 Instrument Sans is bundled locally, with `ss01`, `ss02`, and `ss03` enabled for headings and the wordmark. Body text uses the default letterforms; the alternate ampersand is disabled throughout. The font source and license are in `assets/fonts/`, and the distributed license is in `public/fonts/`. IBM Plex Mono is loaded from Google Fonts for labels, with a monospace fallback.
 
-`components/ProjectArtwork.tsx` contains text-free, responsive SVG illustrations for all six projects. Source research images and earlier project logos remain in `public/images/`.
+`components/ProjectArtwork.tsx` contains text-free, responsive SVG illustrations for all six projects. `public/images/` contains the current portrait and the preserved original portrait.
 
-The `design/` directory preserves the earlier studies, design-system reference, decisions, and review screenshots. These are local working references, not production routes; Vite’s build entry is the root `index.html`.
+The `design/` directory contains the current design-system reference, approved logo exports, shared styles, and design decisions. These are local working references, not production routes; Vite’s build entry is the root `index.html`. Design references use the same font files as the website under `assets/fonts/`.
+
+Editable résumé content and build tools live in `resume/`; published PDFs and earlier versions remain in `public/files/` to preserve direct links. Generated documents and previews belong in the ignored `output/` directory, with temporary files in `tmp/`.
 
 ## Deployment
 
